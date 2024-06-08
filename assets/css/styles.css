@@ -1,42 +1,21 @@
+/* LIST OF CSS 
+======= FPT Innocode Camp 2024 =======
+
+- RESET CSS
+- FONT
+- RESETUP BOOTSTRAP
+- Homepage
+- DTCL Section
+
+======= FPT Innocode Camp 2024 =======
+*/
+
+
 /* RESET CSS */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-
-body {
-    line-height: 1;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: "";
-    content: none;
-}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ""; content: none; } body{ background-color: #0d1323; color: white; font-family: 'Noticia Text', serif; } p{ color:#FFDB7E; }
 
 
-body{
-    background-color: #0d1323;
-    color: white;
-    font-family: 'Noticia Text', serif;
-}
+
 /* FONT  */
 .noticia-text-regular {
     font-family: "Noticia Text", serif;
@@ -117,11 +96,61 @@ body{
     background-size: cover;
     height: calc(100vh - 80px);
 }
+.section-hero .branding{
+    text-align: center;
+    padding-top: 100px;
+}
+.section-hero .hero-image{
+    width: 100%;
+    object-fit: cover;
+    max-width: 800px;
+    position: relative;
+}
+
+.section-hero .play-btn{
+    width: 171px;
+    height: 67px;
+    background: #1A2645;
+    color: white;
+    text-transform: uppercase;
+    font-size: 17px;
+    border: none;
+    position: relative;
+}
+.section-hero .outline-play-btn{
+    background: url(../images/Vector\ 5.png) no-repeat;
+    position: relative;
+
+
+}
+
+/* Menu Section   */
+.section-menu{
+    background: url(../images/section-2.png) no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    top: -40px;
+    position: relative;
+}
+.section-menu img{
+    width: 100%;
+    max-width: 120px;
+}
+.section-menu .item-menu{
+    text-align: center;
+}
+
+/* DTCL Slider  */
+.dtcl-slider{
+    background: url(../images/dtcl.png) no-repeat;
+    background-size: cover;
+    margin-top: 50px;
+    height: 50vh;
+}
+
 
 
 /* Footer */
-
-
 footer{
     background: url(../images/footer.png) no-repeat;
     background-size: cover;
@@ -130,4 +159,10 @@ footer{
     height: calc(300px - 10px);
     top: -10px;
     position: relative;
+}
+footer img{
+    height: 100%;
+    object-fit: contain;
+    max-height: 50px;
+    padding:  0 25px;
 }
