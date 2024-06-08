@@ -16,40 +16,38 @@ const swiper = new Swiper('.swiper:not(.gameplay)', {
         slide.classList.remove('zoom-slide');
       });
 
-      const activeSlide = document.querySelector('.swiper:not(.gameplay) .swiper-slide-active');
-      if (activeSlide) {
-        activeSlide.classList.add('zoom-slide');
-      }
+     
     }
   }
 });
 
+
+
+
+
+
 // Gameplay Swiper
-const gameplaySwiper = new Swiper('.swiper.gameplay', {
-  direction: 'horizontal',
-  loop: true,
+var swiperThumbs = new Swiper('.gameplay-swiper-container-thumbs', {
+  spaceBetween: 10,
   slidesPerView: 1,
-  centeredSlides: true,
-  slideActiveClass: 'swiper-slide-active',
-  pagination: { el: '.swiper-pagination' },
+  // loop: true,
+  // freeMode: true,
+  // watchSlidesVisibility: true,
+  // watchSlidesProgress: true,
+});
 
-  on: {
-    init: function() {
-      const activeSlide = document.querySelector('.swiper.gameplay .swiper-slide-active img');
-      if (activeSlide) {
-        activeSlide.classList.add('zoom-slide');
-      }
-    },
-    slideChange: function() {
-      const slideImages = document.querySelectorAll('.swiper.gameplay .swiper-slide img');
-      slideImages.forEach(image => {
-        image.classList.remove('zoom-slide');
-      });
-
-      const activeSlideImage = document.querySelector('.swiper.gameplay .swiper-slide-active img');
-      if (activeSlideImage) {
-        activeSlideImage.classList.add('zoom-slide');
-      }
-    }
-  }
+var swiperMain = new Swiper('.main-swiper', {
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   clickable: true,
+  // },
+  thumbs: {
+    swiper: swiperThumbs,
+  },
 });
