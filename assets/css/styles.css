@@ -1,0 +1,107 @@
+/* RESET CSS */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+
+body{
+    background-color: #0d1323;
+    color: white;
+    font-family: 'Noticia Text', serif;
+}
+/* FONT  */
+.noticia-text-regular {
+    font-family: "Noticia Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.noticia-text-bold {
+    font-family: "Noticia Text", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.noticia-text-regular-italic {
+    font-family: "Noticia Text", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.noticia-text-bold-italic {
+    font-family: "Noticia Text", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* RESETUP BOOTSTRAP */
+.bg-legends {
+    background: #1A2645 !important;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background: #425380 !important;
+    border: none;
+}
+.legends-nav{
+    height: 80px !important;
+    display: flex;
+    align-items: center;
+}
+.legends-nav ul li{
+ margin: 0 20px;
+}
+.logo{
+    text-align: center;
+    background: url(../images/framelogo2.png) no-repeat;
+    background-size: cover;
+    width: 142px;
+    padding: 30px;
+    z-index: 999;
+}
+
+.login {
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-item{
+    height: 80px;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.navbar-nav li:hover, .nav-item .active{
+    width: auto;
+    background-size: contain !important;
+    background: url(../images/buttonframe.png) no-repeat !important;
+}
