@@ -105,3 +105,29 @@ body{
     background-size: contain !important;
     background: url(../images/buttonframe.png) no-repeat !important;
 }
+
+
+
+
+
+/* Homepage */
+
+.section-hero{
+    background: url(../images/hero.png) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+
+/* Footer */
+
+
+footer{
+    background: url(../images/footer.png) no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 50px 0;
+    height: calc(300px - 10px);
+    top: -10px;
+    position: relative;
+}
