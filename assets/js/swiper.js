@@ -21,11 +21,6 @@ const swiper = new Swiper('.swiper:not(.gameplay)', {
   }
 });
 
-
-
-
-
-
 // Gameplay Swiper
 // Initialize Swiper for thumbnails
 var swiperThumbs = new Swiper('.gameplay-swiper-container-thumbs', {
