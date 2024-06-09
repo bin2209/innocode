@@ -46,3 +46,32 @@ var swiperMain = new Swiper('.main-swiper', {
   },
 });
 
+
+
+// Initialize Swiper for the main slides
+var swiperMain = new Swiper('.map-main-swiper', {
+  spaceBetween: 0,
+  loop: true,
+  navigation: {
+    nextEl: '.map-swiper-button-next',
+    prevEl: '.map-swiper-button-prev',
+  }
+});
+
+// Log the translate3d values of each swiper slide
+var swiperWrapper = document.querySelector('.map-main-swiper .swiper-wrapper');
+var slides = swiperWrapper.querySelectorAll('.swiper-slide');
+
+slides.forEach(function(slide, index) {
+  var transformValue = getTranslateValue(slide.style.transform);
+  console.log('item ' + (index + 1) + ' translate3d(' + transformValue + ')');
+});
+
+// Function to extract X translation from transform value
+function getTranslateValue(transformString) {
+  var match = transformString.match(/translate3d\((-?\d+px), 0px, 0px\)/);
+  if (match && match.length > 1) {
+    return match[1];
+  }
+  return '0px'; // Default value if no match found
+}

@@ -491,7 +491,8 @@ section {
 
 .section-map {
     background: url(../images/runeterra.png) no-repeat;
-    height: 80vh;
+    /* height: 80vh; */
+    padding: 100px 0;
 }
 
 .section-map .col {
@@ -507,6 +508,28 @@ section {
     width: 100vw !important;
     background-size: cover;
     /* margin-top: 24%; */
+}
+
+
+
+
+
+.map-swiper-button-next,.map-swiper-button-prev{
+    width: 20px;
+    height: 18px;
+    position: relative;
+    display: inline-flex;
+    background-size: contain !important;
+}
+
+.map-swiper-button-next{
+    background: url(../images/next.png) no-repeat;
+    right: 0;
+}
+
+.map-swiper-button-prev{
+    background: url(../images/prev.png) no-repeat;
+    left: 0;
 }
 
 /* Footer */
