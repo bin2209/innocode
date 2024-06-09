@@ -27,27 +27,22 @@ const swiper = new Swiper('.swiper:not(.gameplay)', {
 
 
 // Gameplay Swiper
+// Initialize Swiper for thumbnails
 var swiperThumbs = new Swiper('.gameplay-swiper-container-thumbs', {
-  spaceBetween: 10,
+  spaceBetween: 0,
   slidesPerView: 1,
-  // loop: true,
-  // freeMode: true,
-  // watchSlidesVisibility: true,
-  // watchSlidesProgress: true,
 });
 
+// Initialize Swiper for main slides
 var swiperMain = new Swiper('.main-swiper', {
-  spaceBetween: 10,
+  spaceBetween: 0,
   loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  // pagination: {
-  //   el: '.swiper-pagination',
-  //   clickable: true,
-  // },
   thumbs: {
     swiper: swiperThumbs,
   },
 });
+
