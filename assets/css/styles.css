@@ -105,7 +105,8 @@ q:after {
     content: none;
 }
 
-html, body {
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -116,9 +117,10 @@ body {
     font-family: 'Noticia Text', serif;
 }
 
-.primary-color{
+.primary-color {
     color: #FFDB7E;
 }
+
 p {
     color: #FFDB7E;
 }
@@ -193,6 +195,34 @@ section {
     height: 80px !important;
     display: flex;
     align-items: center;
+    color: white;
+}
+
+.legends-nav a {
+    color: white;
+
+}
+
+.legends-nav .search img {
+    height: 40px;
+    padding: 4px;
+}
+
+.legends-nav .search input {
+    width: 112px;
+    transition: width 0.1s ease;
+}
+
+.legends-nav .search .search-icon {
+    transition: width 0.1s ease;
+    position: absolute;
+    margin-left: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.legends-nav .search input:focus {
+    width: 224px;
 }
 
 .legends-nav ul li {
@@ -360,17 +390,17 @@ section {
 
 
 .tft .swiper-slide img {
-    width: 153px ;
-    height: 163px ;
+    width: 153px;
+    height: 163px;
     left: 0em;
     position: relative;
     top: 5em;
     opacity: .4;
     object-fit: cover;
     transition: transform 0.3s ease, opacity 0.3s ease;
-  
-        transform: skew(-25deg);
-   }
+
+    transform: skew(-25deg);
+}
 
 .swiper-pagination-bullet {
     background: #FFDB7E !important;
@@ -385,34 +415,39 @@ section {
     background: #FFDB7E !important;
 }
 
-.tft .swiper-pagination-bullets{   
+.tft .swiper-pagination-bullets {
     position: absolute;
     top: 24em !important;
 }
-.swiper{
+
+.swiper {
     overflow: unset !important;
 }
+
 /* Scale the active (centered) slide */
 .tft .swiper-slide-active {
     transition: transform 0.3s ease;
     opacity: 1;
 }
-.tft .swiper-slide-active img{
+
+.tft .swiper-slide-active img {
     width: 175px;
     height: 197px;
     left: 0em;
     top: 4.2em !important;
 }
-.tft .content{
+
+.tft .content {
     margin-top: 11em;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-.tft .swiper-slide-active .content{
+
+.tft .swiper-slide-active .content {
     opacity: 1;
 }
 
-.tft .swiper-slide-active .overplay{
+.tft .swiper-slide-active .overplay {
     background: url(../images/tft-main-frame.png) no-repeat !important;
     background-size: contain !important;
     position: absolute;
@@ -422,31 +457,39 @@ section {
     top: 0 !important;
 }
 
-.tft .swiper-slide .overplay{
+.tft .swiper-slide .overplay {
     background: url(../images/tft-frame.png) no-repeat;
-      background-size: contain;
+    background-size: contain;
     position: absolute;
     height: 100%;
     z-index: 1;
     top: 5em;
 }
 
-.tft h2{
-    font-size: 16px;    /* for scale 1.6 */
+.tft h2 {
+    font-size: 16px;
+    /* for scale 1.6 */
 }
-.tft p{
-    font-size: 8px;   /* for scale 1.6 */
+
+.tft p {
+    font-size: 8px;
+    /* for scale 1.6 */
 }
-.dtcl-slider .tft .swiper-slide-active img, .dtcl-slider .tft .swiper-slide-active h2, .dtcl-slider .tft .swiper-slide-active p {
+
+.dtcl-slider .tft .swiper-slide-active img,
+.dtcl-slider .tft .swiper-slide-active h2,
+.dtcl-slider .tft .swiper-slide-active p {
     opacity: 1;
     transform: scale(1.6) !important;
 }
 
-.dtcl-slider .tft .swiper-slide-active img{
-transform: skew(-25deg) scale(1.6) !important;
+.dtcl-slider .tft .swiper-slide-active img {
+    transform: skew(-25deg) scale(1.6) !important;
 
 }
-.tft .swiper-button-next, .tft .swiper-button-prev{
+
+.tft .swiper-button-next,
+.tft .swiper-button-prev {
     top: 26.2em !important;
 }
 
@@ -457,7 +500,7 @@ transform: skew(-25deg) scale(1.6) !important;
     padding: 100px 0 100px 0;
 }
 
-.section-gameplay .overplay{
+.section-gameplay .overplay {
     background: url(../images/frame-gameplay.png) no-repeat;
     background-size: contain;
     width: 100%;
@@ -466,6 +509,7 @@ transform: skew(-25deg) scale(1.6) !important;
     bottom: 1.6em;
     left: 1.3em;
 }
+
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -496,17 +540,20 @@ transform: skew(-25deg) scale(1.6) !important;
 }
 
 .tft .swiper-wrapper {
-   left: 4.5%;
+    left: 4.5%;
 }
-.tft .swiper-wrapper .swiper-slide:first-child{
+
+.tft .swiper-wrapper .swiper-slide:first-child {
     /* margin-right: 10%;
      */
-     opacity: 0;
+    opacity: 0;
 }
-.gameplay .swiper-wrapper{
+
+.gameplay .swiper-wrapper {
     display: flex;
     justify-content: space-around;
 }
+
 .gameplay-swiper-container-thumbs .swiper-slide {
     width: 104px !important;
 }
@@ -517,28 +564,36 @@ transform: skew(-25deg) scale(1.6) !important;
     width: 100px;
     object-fit: cover;
 }
-.gameplay .main-swiper .swiper-slide{
+
+.gameplay .main-swiper .swiper-slide {
     flex-direction: column;
 }
-.gameplay .gameplay-swiper-container-thumbs{
+
+.gameplay .gameplay-swiper-container-thumbs {
     max-width: 366px;
     margin: auto;
 }
-.gameplay .main-swiper .swiper-slide video{
+
+.gameplay .main-swiper .swiper-slide video {
     width: 100%;
 }
-.gameplay .main-swiper .swiper-slide-active{
+
+.gameplay .main-swiper .swiper-slide-active {
     opacity: 1 !important;
 }
-.gameplay .main-swiper .swiper-slide{
+
+.gameplay .main-swiper .swiper-slide {
     opacity: 0;
 }
-.gameplay .swiper-backface-hidden .swiper-slide{
+
+.gameplay .swiper-backface-hidden .swiper-slide {
     display: none;
 }
+
 .gameplay .gameplay-swiper-container-thumbs .swiper-slide {
     transition: opacity 0.3s ease;
 }
+
 .gameplay .swiper-slide-thumb-active {
     border: 2px solid #FFDB7E;
     transition: transform 0.3s ease;
@@ -563,11 +618,12 @@ transform: skew(-25deg) scale(1.6) !important;
     /* height: 80vh; */
     padding: 100px 0;
 }
-.section-map .swiper-slide{
-    opacity: 0 ;
+
+.section-map .swiper-slide {
+    opacity: 0;
 }
 
-.section-map .swiper-slide-active{
+.section-map .swiper-slide-active {
     opacity: 1 !important;
 }
 
@@ -590,7 +646,8 @@ transform: skew(-25deg) scale(1.6) !important;
 
 
 
-.map-swiper-button-next,.map-swiper-button-prev{
+.map-swiper-button-next,
+.map-swiper-button-prev {
     width: 20px;
     height: 18px;
     position: relative;
@@ -598,14 +655,30 @@ transform: skew(-25deg) scale(1.6) !important;
     background-size: contain !important;
 }
 
-.map-swiper-button-next{
+.map-swiper-button-next {
     background: url(../images/next.png) no-repeat;
     right: 0;
 }
 
-.map-swiper-button-prev{
+.map-swiper-button-prev {
     background: url(../images/prev.png) no-repeat;
     left: 0;
+}
+
+/* worldmap */
+.section-worldmap {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/worldmap.png) no-repeat;
+    background-size: cover;
+}
+
+
+/* Famost Area Section  */
+.famost-area-section {
+    width: 100%;
+    /* height: 100vh; */
+    padding: 50px 0;
 }
 
 /* Footer */
@@ -624,4 +697,64 @@ footer img {
     object-fit: contain;
     max-height: 50px;
     padding: 0 25px;
+}
+
+.navbar-brand {
+    display: none;
+}
+.mobile-search {
+    display: none !important;
+}
+/* REPONSIVE */
+@media (max-width: 991.98px) {
+    .navbar-brand {
+        display: block;
+        position: relative;
+        bottom: 8px;
+    }
+
+    .legends-nav .logo {
+        display: none;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .navbar-toggler {
+        border-radius: 0;
+        border: none;
+        height: 80px;
+        width: 80px;
+        position: relative;
+        left: -12px;
+        top: -8px;
+        background: #FFDB7E;
+    }
+    .navbar-collapse{
+        z-index: 99;
+        background: #1A2645;
+        top: -8px;
+        position: relative;
+    }
+    .collapse .login{
+        display: none !important;
+    }
+    .mobile-search {
+        display: block !important;
+    }
+    .legends-nav .search input{
+        width: 86%;
+        position: relative;
+        bottom: 10px;
+    }
+    .search-icon{
+        bottom: 18px;
+        z-index: 99;
+    }
 }
