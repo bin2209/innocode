@@ -232,6 +232,7 @@ section {
 .logo {
     text-align: center;
     background: url(../images/framelogo2.png) no-repeat;
+     background-position: center;
     background-size: cover;
     width: 142px;
     padding: 30px;
@@ -254,7 +255,8 @@ section {
     width: auto;
     background-size: contain !important;
     background: url(../images/buttonframe.png) no-repeat !important;
-}
+ background-position: center;}
+
 
 
 
@@ -264,6 +266,7 @@ section {
 
 .section-hero {
     background: url(../images/hero.png) no-repeat;
+     background-position: center;
     height: calc(100vh - 80px);
 }
 
@@ -299,6 +302,7 @@ section {
 
 .section-hero .outline-play-btn {
     background: url(../images/Vector\ 5.png) no-repeat;
+     background-position: center;
     width: 181px;
     position: absolute;
     z-index: 999;
@@ -308,6 +312,7 @@ section {
 /* Menu Section   */
 .section-menu {
     background: url(../images/section-2.png) no-repeat;
+     background-position: center;
     position: relative;
 }
 
@@ -323,6 +328,7 @@ section {
 /* DTCL Slider  */
 .dtcl-slider {
     background: url(../images/dtcl.png) no-repeat;
+     background-position: center;
     padding: 120px 0 100px;
 }
 
@@ -364,12 +370,14 @@ section {
 
 .swiper-button-next {
     background: url(../images/next.png) no-repeat;
+     background-position: center;
     position: absolute;
     right: 0;
 }
 
 .swiper-button-prev {
     background: url(../images/prev.png) no-repeat;
+     background-position: center;
     position: absolute;
     left: 0;
 }
@@ -449,6 +457,7 @@ section {
 
 .tft .swiper-slide-active .overplay {
     background: url(../images/tft-main-frame.png) no-repeat !important;
+     background-position: center;
     background-size: contain !important;
     position: absolute;
     min-width: 400px;
@@ -459,6 +468,7 @@ section {
 
 .tft .swiper-slide .overplay {
     background: url(../images/tft-frame.png) no-repeat;
+     background-position: center;
     background-size: contain;
     position: absolute;
     height: 100%;
@@ -497,11 +507,13 @@ section {
 /* gameplay Section */
 .section-gameplay {
     background: url(../images/gameplay.png) no-repeat;
+     background-position: center;
     padding: 100px 0 100px 0;
 }
 
 .section-gameplay .overplay {
     background: url(../images/frame-gameplay.png) no-repeat;
+     background-position: center;
     background-size: contain;
     width: 100%;
     height: 100%;
@@ -615,6 +627,7 @@ section {
 
 .section-map {
     background: url(../images/runeterra.png) no-repeat;
+     background-position: center;
     /* height: 80vh; */
     padding: 100px 0;
 }
@@ -635,6 +648,7 @@ section {
 
 .shadow-divided {
     background: url(../images/shadow-divided.png) no-repeat;
+     background-position: center;
     /* height: 124%; */
     position: absolute;
     width: 100vw !important;
@@ -657,11 +671,13 @@ section {
 
 .map-swiper-button-next {
     background: url(../images/next.png) no-repeat;
+     background-position: center;
     right: 0;
 }
 
 .map-swiper-button-prev {
     background: url(../images/prev.png) no-repeat;
+     background-position: center;
     left: 0;
 }
 
@@ -670,11 +686,12 @@ section {
     width: 100%;
     height: 100vh;
     background: url(../images/worldmap.png) no-repeat;
+     background-position: center;
     background-size: cover;
 }
 /* champions */
 .section-champions{
-    background-image: url('assets/images/champion-bg.png');
+    background-image: url('../images/champion-bg.png');
     background-size: contain;
     padding: 50px 0;
 }
@@ -691,7 +708,7 @@ section {
     padding: 10px 0;
 }
 .legends-btn{
-    background: url('assets/images/legends-btn.png') no-repeat;
+    background: url('../images/legends-btn.png') no-repeat;
     background-size: contain;
     text-align: center;
 
@@ -716,6 +733,7 @@ section {
 /* Champions  */
 .champions-hero{
     background: url(../images/champions.png) no-repeat !important;
+     background-position: center;
     width: 100%;
     background-size: cover !important;
 }
@@ -723,6 +741,7 @@ section {
 /* Footer */
 footer {
     background: url(../images/footer.png) no-repeat;
+     background-position: center;
     background-size: cover;
     color: white;
     padding: 50px 0;
@@ -752,6 +771,7 @@ footer img {
  }
 .champion-detail-147{
     background: url(../images/bg-champion-147.png) no-repeat;
+     background-position: center;
     background-size: cover;
 }
 
@@ -763,6 +783,7 @@ footer img {
 /* Champion description */
 .champion-detail-description {
     background: url(../images/champion-description.png) no-repeat;
+     background-position: center;
     height: 500px;
     width: 100%;
     margin: -20px 0;
