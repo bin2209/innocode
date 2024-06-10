@@ -468,7 +468,6 @@ section {
 
 .tft .swiper-slide .overplay {
     background: url(../images/tft-frame.png) no-repeat;
-     background-position: center;
     background-size: contain;
     position: absolute;
     height: 100%;
@@ -628,8 +627,9 @@ section {
 .section-map {
     background: url(../images/runeterra.png) no-repeat;
      background-position: center;
-    /* height: 80vh; */
     padding: 100px 0;
+    transition: opacity .3s ease-out;
+    opacity: 0;
 }
 
 .section-map .swiper-slide {
@@ -707,12 +707,13 @@ section {
     font-size: 20px;
     padding: 10px 0;
 }
+
 .legends-btn{
     background: url('../images/legends-btn.png') no-repeat;
     background-size: contain;
     text-align: center;
-
 }
+
 .legends-btn button{
     border: none;
     background: none;
@@ -771,10 +772,19 @@ footer img {
  }
 .champion-detail-147{
     background: url(../images/bg-champion-147.png) no-repeat;
-     background-position: center;
+    background-position: center;
     background-size: cover;
 }
 
+.champion-detail-description  .overplay{
+    background-position: center !important;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.champion-detail-description-147 .overplay{
+    background: url(../images/champion-description-147.png) no-repeat;
+}
 .champion-detail .hero-image{
     width: 80% !important;
 }
