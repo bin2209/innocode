@@ -795,6 +795,10 @@ footer img {
     border: 2px solid  #FFDB7E !important;
     padding: 10px;
 }
+#champion-name-banner {
+    transform: scale(1.5);
+}
+
 .champion-detail-description img{
     width: 100%;
 }
@@ -813,7 +817,9 @@ footer img {
     z-index: 1;
     position: relative;
 }
-
+.champion-name-banner-mb{
+    text-align: left;
+}
 /* REPONSIVE */
 @media (max-width: 991.98px) {
     .navbar-brand {
@@ -872,6 +878,11 @@ footer img {
     }
     .champion-detail-description .vl{
         display: none;
+    }
+    .champion-name-banner-mb{
+        width: 100%;
+        text-align: center;
+        margin: auto;
     }
 }
 
