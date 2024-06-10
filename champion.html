@@ -21,36 +21,55 @@
 </head>
 
 <body>
+<!-- NAVBAR -->
+<nav class="legends-nav navbar navbar-expand-lg bg-body-tertiary bg-legends">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <!-- NAVBAR -->
-  <nav class="legends-nav navbar-expand-lg bg-body-tertiary bg-legends">
-    <div class="container">
-      <div class="collapse navbar-collapse justify-content-between row">
-        <ul class="navbar-nav col-5">
-          <li class="nav-item active d-flex">
-            <a class="nav-link " aria-current="page" href="#">Game</a>
-          </li>
-          <li class="nav-item d-flex">
-            <a class="nav-link" href="champion.html">Champion</a>
-          </li>
-          <li class="nav-item d-flex">
-            <a class="nav-link" href="#">News</a>
-          </li>
-        </ul>
-        <div class="logo col-2">
-          <img src="assets/images/logo.svg" alt="logo">
+
+    <div class="mobile-search search">
+      <div class="search-icon"><img src="assets/images/search.png"/></div>
+      <input type="search" class="form-control btn btn-primary text-uppercase rounded-pill mx-2"/>
+  </div>
+
+
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo.svg" alt="logo"/>
+    </a>
+    
+
+    <div class="collapse navbar-collapse justify-content-between row" id="navbarTogglerDemo03">
+      <ul class="navbar-nav col-5">
+        <li class="nav-item active d-flex">
+          <a class="nav-link " aria-current="page" href="#">Game</a>
+        </li>
+        <li class="nav-item d-flex">
+          <a class="nav-link" href="champion.html">Champion</a>
+        </li>
+        <li class="nav-item d-flex">
+          <a class="nav-link" href="#">News</a>
+        </li>
+      </ul>
+      <div class="logo col-2 text-center">
+        <a href="index.html"> <img src="assets/images/logo.svg" alt="logo"></a>
+      </div>
+      <div class="col-5 login d-flex justify-content-end align-items-center">
+        <div class="search d-flex align-items-center mx-3">
+            <div class="search-icon"><img src="assets/images/search.png"/></div>
+            <input type="search" class="form-control btn btn-primary text-uppercase rounded-pill mx-2"/>
         </div>
-        <div class="col-5 login">
-          <button type="button" class="btn btn-primary text-uppercase">Đăng nhập</button>
-        </div>
+        <button type="button" class="btn btn-primary text-uppercase">Đăng nhập</button>
       </div>
     </div>
-  </nav>
-  <!-- NAVBAR -->
+  </div>
+</nav>
+<!-- NAVBAR -->
 
 
   <!-- homepage -->
-  <section class="section-hero ">
+  <section class="section-hero  champions-hero">
     <div class="container">
 
       <div class="row">
@@ -75,45 +94,13 @@
 
 
   <style>
-    .section-champions{
-        background-image: url('assets/images/champion-bg.png');
-        background-size: cover;
-        padding: 50px 0;
-    }
-    .champion{
-        border: 1px solid #BB882C;
-    }
-    .champion img{
-        width: 100%;
-
-    }
-    .champion h2{
-        background-color: #BB882C;
-        font-size: 20px;
-        padding: 10px 0;
-    }
-    .legends-btn{
-        background: url('assets/images/legends-btn.png') no-repeat;
-        background-size: contain;
-        text-align: center;
-
-    }
-    .legends-btn button{
-        border: none;
-        background: none;
-        color: white;
-        height: 58px;
-        text-align: left;
-        width: 100%;
-        padding: 3px 0 15px 62px;
-        text-transform: uppercase;
-    }
+   
 </style>
 
 
   <!-- Menu Section  -->
-  <section class="section-champions">
-    <div class="container">
+  <section class="section-champions px-3">
+    <div class="container ">
         <data id="champions-filter" class="row">
             <div class="col-3 mb-3">
                 <div class="legends-btn">
@@ -194,7 +181,7 @@
             container.innerHTML += `
             <div class="col-4 col-sm-2 p-3">
                 <div class="champion text-center">
-                    <img src="${champion.icon}" alt="${champion.name} icon">
+                   <a href="/champion-detail.html"> <img src="${champion.icon}" alt="${champion.name} icon"></a>
                     <h2>${champion.name}</h2>
                 </div>
                 </div>

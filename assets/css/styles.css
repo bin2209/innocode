@@ -672,13 +672,52 @@ section {
     background: url(../images/worldmap.png) no-repeat;
     background-size: cover;
 }
+/* champions */
+.section-champions{
+    background-image: url('assets/images/champion-bg.png');
+    background-size: contain;
+    padding: 50px 0;
+}
+.champion{
+    border: 1px solid #BB882C;
+}
+.champion img{
+    width: 100%;
 
+}
+.champion h2{
+    background-color: #BB882C;
+    font-size: 20px;
+    padding: 10px 0;
+}
+.legends-btn{
+    background: url('assets/images/legends-btn.png') no-repeat;
+    background-size: contain;
+    text-align: center;
+
+}
+.legends-btn button{
+    border: none;
+    background: none;
+    color: white;
+    height: 58px;
+    text-align: left;
+    width: 100%;
+    padding: 3px 0 15px 62px;
+    text-transform: uppercase;
+}
 
 /* Famost Area Section  */
 .famost-area-section {
     width: 100%;
     /* height: 100vh; */
     padding: 50px 0;
+}
+/* Champions  */
+.champions-hero{
+    background: url(../images/champions.png) no-repeat !important;
+    width: 100%;
+    background-size: cover !important;
 }
 
 /* Footer */
@@ -705,6 +744,32 @@ footer img {
 .mobile-search {
     display: none !important;
 }
+
+ /* Champion-detail-ID */
+
+ .champion-detail img{
+ max-width: unset !important; 
+ }
+.champion-detail-147{
+    background: url(../images/bg-champion-147.png) no-repeat;
+    background-size: cover;
+}
+
+.champion-detail .hero-image{
+    width: 80% !important;
+}
+
+
+/* Champion description */
+.champion-detail-description {
+    background: url(../images/champion-description.png) no-repeat;
+    height: 500px;
+    width: 100%;
+    margin: -20px 0;
+    z-index: 1;
+    position: relative;
+}
+
 /* REPONSIVE */
 @media (max-width: 991.98px) {
     .navbar-brand {
@@ -757,4 +822,10 @@ footer img {
         bottom: 18px;
         z-index: 99;
     }
+    .section-worldmap {
+        height: 100vh;
+        background-size: contain;
+    }
 }
+
+
