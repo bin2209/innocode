@@ -788,7 +788,20 @@ footer img {
 .champion-detail .hero-image{
     width: 80% !important;
 }
-
+.champion-detail-description .vl{
+    border-right: 1px solid #FFDB7E;
+}
+#champion-icon{
+    border: 2px solid  #FFDB7E !important;
+    padding: 10px;
+}
+.champion-detail-description img{
+    width: 100%;
+}
+.champion-detail-description hr{
+    border: 1px solid #FFDB7E;
+    height: 100%;
+}
 
 /* Champion description */
 .champion-detail-description {
@@ -856,6 +869,9 @@ footer img {
     .section-worldmap {
         height: 100vh;
         background-size: contain;
+    }
+    .champion-detail-description .vl{
+        display: none;
     }
 }
 
