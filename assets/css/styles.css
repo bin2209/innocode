@@ -105,6 +105,11 @@ q:after {
     content: none;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: #0d1323;
     color: white;
@@ -278,7 +283,6 @@ section {
 
 .section-menu img {
     width: 100%;
-    max-width: 200px;
 }
 
 .section-menu .item-menu {
@@ -289,7 +293,7 @@ section {
 /* DTCL Slider  */
 .dtcl-slider {
     background: url(../images/dtcl.png) no-repeat;
-    padding: 100px 0;
+    padding: 120px 0 100px;
 }
 
 .dtcl-slider .swiper {
@@ -298,9 +302,6 @@ section {
     text-align: center;
 }
 
-.dtcl-slider .swiper {
-    height: 600px;
-}
 
 .swiper-slide {
     display: flex !important;
@@ -356,17 +357,20 @@ section {
     width: 80px !important;
 }
 
+
+
 .tft .swiper-slide img {
-    transform: skew(-20deg);
-    width: 100%;
-    height: 300px;
-    /* max-width: 300px;
-    max-height: 600px */
+    width: 153px ;
+    height: 163px ;
+    left: 0em;
+    position: relative;
+    top: 5em;
     opacity: .4;
     object-fit: cover;
     transition: transform 0.3s ease, opacity 0.3s ease;
-
-}
+  
+        transform: skew(-25deg);
+   }
 
 .swiper-pagination-bullet {
     background: #FFDB7E !important;
@@ -381,19 +385,69 @@ section {
     background: #FFDB7E !important;
 }
 
+.tft .swiper-pagination-bullets{   
+    position: absolute;
+    top: 24em !important;
+}
+.swiper{
+    overflow: unset !important;
+}
 /* Scale the active (centered) slide */
 .tft .swiper-slide-active {
     transition: transform 0.3s ease;
     opacity: 1;
-
+}
+.tft .swiper-slide-active img{
+    width: 175px;
+    height: 197px;
+    left: 0em;
+    top: 4.2em !important;
+}
+.tft .content{
+    margin-top: 11em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.tft .swiper-slide-active .content{
+    opacity: 1;
 }
 
-.tft .swiper-slide-active img {
+.tft .swiper-slide-active .overplay{
+    background: url(../images/tft-main-frame.png) no-repeat !important;
+    background-size: contain !important;
+    position: absolute;
+    min-width: 400px;
+    height: 100%;
+    z-index: 1;
+    top: 0 !important;
+}
 
+.tft .swiper-slide .overplay{
+    background: url(../images/tft-frame.png) no-repeat;
+      background-size: contain;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    top: 5em;
+}
+
+.tft h2{
+    font-size: 16px;    /* for scale 1.6 */
+}
+.tft p{
+    font-size: 8px;   /* for scale 1.6 */
+}
+.dtcl-slider .tft .swiper-slide-active img, .dtcl-slider .tft .swiper-slide-active h2, .dtcl-slider .tft .swiper-slide-active p {
     opacity: 1;
     transform: scale(1.6) !important;
-    /* Adjust the scale value as needed */
+}
 
+.dtcl-slider .tft .swiper-slide-active img{
+transform: skew(-25deg) scale(1.6) !important;
+
+}
+.tft .swiper-button-next, .tft .swiper-button-prev{
+    top: 26.2em !important;
 }
 
 
@@ -403,6 +457,15 @@ section {
     padding: 100px 0 100px 0;
 }
 
+.section-gameplay .overplay{
+    background: url(../images/frame-gameplay.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 1.6em;
+    left: 1.3em;
+}
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -411,7 +474,6 @@ section {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -433,7 +495,14 @@ section {
     object-fit: cover;
 }
 
-
+.tft .swiper-wrapper {
+   left: 4.5%;
+}
+.tft .swiper-wrapper .swiper-slide:first-child{
+    /* margin-right: 10%;
+     */
+     opacity: 0;
+}
 .gameplay .swiper-wrapper{
     display: flex;
     justify-content: space-around;
@@ -493,6 +562,13 @@ section {
     background: url(../images/runeterra.png) no-repeat;
     /* height: 80vh; */
     padding: 100px 0;
+}
+.section-map .swiper-slide{
+    opacity: 0 ;
+}
+
+.section-map .swiper-slide-active{
+    opacity: 1 !important;
 }
 
 .section-map .col {

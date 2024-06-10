@@ -32,10 +32,7 @@ var swiperThumbs = new Swiper('.gameplay-swiper-container-thumbs', {
 var swiperMain = new Swiper('.main-swiper', {
   spaceBetween: 0,
   loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+ 
   thumbs: {
     swiper: swiperThumbs,
   },
@@ -43,30 +40,39 @@ var swiperMain = new Swiper('.main-swiper', {
 
 
 
-// Initialize Swiper for the main slides
-var swiperMain = new Swiper('.map-main-swiper', {
-  spaceBetween: 0,
-  loop: true,
-  navigation: {
-    nextEl: '.map-swiper-button-next',
-    prevEl: '.map-swiper-button-prev',
+document.addEventListener('DOMContentLoaded', function () {
+  // Initialize Swiper for the main slides
+  var swiperMain = new Swiper('.map-main-swiper', {
+    spaceBetween: 0,
+    loop: true,
+    navigation: {
+      nextEl: '.map-swiper-button-next',
+      prevEl: '.map-swiper-button-prev',
+    },
+    on: {
+      init: function () {
+        updateSectionBackground();
+      },
+      slideChangeTransitionEnd: function () {
+        updateSectionBackground();
+      }
+    }
+  });
+
+  // Update the background image of .section-map based on the active slide
+  function updateSectionBackground() {
+    var activeSlide = document.querySelector('.map-main-swiper .swiper-slide-active');
+    if (activeSlide) {
+      var bgData = activeSlide.getAttribute('bg-data');
+      if (bgData) {
+        var sectionMap = document.getElementById('section-map');
+        sectionMap.style.backgroundImage = 'url(' + bgData + ')';
+      } else {
+        console.error('bg-data attribute not found on the active slide');
+      }
+    } else {
+      console.error('Active slide not found');
+    }
   }
 });
 
-// Log the translate3d values of each swiper slide
-var swiperWrapper = document.querySelector('.map-main-swiper .swiper-wrapper');
-var slides = swiperWrapper.querySelectorAll('.swiper-slide');
-
-slides.forEach(function(slide, index) {
-  var transformValue = getTranslateValue(slide.style.transform);
-  console.log('item ' + (index + 1) + ' translate3d(' + transformValue + ')');
-});
-
-// Function to extract X translation from transform value
-function getTranslateValue(transformString) {
-  var match = transformString.match(/translate3d\((-?\d+px), 0px, 0px\)/);
-  if (match && match.length > 1) {
-    return match[1];
-  }
-  return '0px'; // Default value if no match found
-}
