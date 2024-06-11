@@ -518,7 +518,7 @@ section {
     height: 100%;
     position: absolute;
     bottom: 1.6em;
-    left: 1.3em;
+    left: 0.5em;
 }
 
 .swiper-container {
@@ -609,8 +609,12 @@ section {
 }
 
 .gameplay .swiper-slide-thumb-active {
+    transition: transform 0.3s ease;
+}
+.gameplay .swiper-slide-thumb-active img{
     border: 2px solid #FFDB7E;
     transition: transform 0.3s ease;
+
 }
 
 /* .gameplay .main-swiper .swiper-slide:nth-child(1){
@@ -860,7 +864,7 @@ footer img {
         top: -8px;
         position: relative;
     }
-    .collapse .login{
+     .login{
         display: none !important;
     }
     .mobile-search {
@@ -886,6 +890,29 @@ footer img {
         width: 100%;
         text-align: center;
         margin: auto;
+    }
+    .gameplay-swiper-container-thumbs .swiper-slide img{
+        width: 80px;
+        height: 80px;
+    }
+    .dtcl-slider{
+    padding: 120px 0 200px;
+
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        top: 30em !important;
+    }
+    .tft .swiper-button-next, .tft .swiper-button-prev{
+        top: 32em !important;
+    }
+    .swiper-button-prev{
+        left: 1em !important;
+    }
+    .swiper-button-next{
+        right: 1em !important;
+    }
+    .tft .content{
+        margin-top: 17em;
     }
 }
 

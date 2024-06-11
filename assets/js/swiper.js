@@ -13,6 +13,25 @@ document.addEventListener('DOMContentLoaded', function () {
       delay: 4000, // Auto change every 4 seconds
       disableOnInteraction: false, // Enable navigation and pagination even when autoplay is active
     },
+    breakpoints: {
+      // When window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+     
+      // When window width is >= 640px
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+    
+      // When window width is >= 1200px
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 10
+      }
+    },
     on: {
       slideChange: function () {
         const slides = document.querySelectorAll('.swiper:not(.gameplay) .swiper-slide');
@@ -22,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+  
 
 
   // Gameplay Swiper
