@@ -295,20 +295,20 @@ section {
 
 
 
- #your-nexus, #enemy-nexus {
+ #your-nexus, #enemy-nexus, #TURRETS, #INHIBITORS{
     display: none;
     transition: opacity 1s ease-out;
 }
-#show-your-nexus, #show-enemy-nexus {
+#show-your-nexus, #show-enemy-nexus, #show-TURRETS , #show-INHIBITORS {
     opacity: 0.5;
 }
 
-#show-your-nexus:hover, #show-enemy-nexus:hover {
+#show-your-nexus:hover, #show-enemy-nexus:hover , #show-TURRETS:hover , #show-INHIBITORS:hover{
     opacity: 0.7;
 }
 
 
-#show-your-nexus.active, #show-enemy-nexus.active {
+#show-your-nexus.active, #show-enemy-nexus.active ,  #show-TURRETS.active , #show-INHIBITORS.active{
     opacity: 1;
 }
 
@@ -1005,6 +1005,9 @@ footer img {
     }
     .section-map .swiper-slide {
         width: 100%;
+    }
+    .section-welcome h3{
+        color:black;
     }
 }
 
