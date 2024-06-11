@@ -22,50 +22,50 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="legends-nav navbar navbar-expand-lg bg-body-tertiary bg-legends">
+    <nav id="legends-nav" class="legends-nav navbar navbar-expand-lg bg-body-tertiary bg-legends">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-            <div class="mobile-search search">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+    
+          <div class="mobile-search search">
+            <div class="search-icon"><img src="assets/images/search.png" /></div>
+            <input type="search" class="form-control btn btn-primary text-uppercase rounded-pill mx-2" />
+          </div>
+    
+    
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo.svg" alt="logo" />
+          </a>
+    
+    
+          <div class="collapse navbar-collapse justify-content-between row" id="navbarTogglerDemo03">
+            <ul class="navbar-nav col-12 col-md-5">
+              <li class="nav-item active d-flex">
+                <a class="nav-link " aria-current="page" href="game.html">Game</a>
+              </li>
+              <li class="nav-item d-flex">
+                <a class="nav-link" href="champion.html">Champion</a>
+              </li>
+              <li class="nav-item d-flex">
+                <a class="nav-link" href="#">News</a>
+              </li>
+            </ul>
+            <div class="logo col-2 text-center">
+              <a href="index.html"> <img src="assets/images/logo.svg" alt="logo"></a>
+            </div>
+            <div class="col-5 login d-flex justify-content-end align-items-center">
+              <div class="search d-flex align-items-center mx-3">
                 <div class="search-icon"><img src="assets/images/search.png" /></div>
                 <input type="search" class="form-control btn btn-primary text-uppercase rounded-pill mx-2" />
+              </div>
+              <button type="button" class="btn btn-primary text-uppercase">Đăng nhập</button>
             </div>
-
-
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo.svg" alt="logo" />
-            </a>
-
-
-            <div class="collapse navbar-collapse justify-content-between row" id="navbarTogglerDemo03">
-                <ul class="navbar-nav col-12 col-md-5">
-                    <li class="nav-item active d-flex">
-                        <a class="nav-link " aria-current="page" href="game.html">Game</a>
-                    </li>
-                    <li class="nav-item d-flex">
-                        <a class="nav-link" href="champion.html">Champion</a>
-                    </li>
-                    <li class="nav-item d-flex">
-                        <a class="nav-link" href="#">News</a>
-                    </li>
-                </ul>
-                <div class="logo col-2 text-center">
-                    <a href="index.html"> <img src="assets/images/logo.svg" alt="logo"></a>
-                </div>
-                <div class="col-5 login d-flex justify-content-end align-items-center">
-                    <div class="search d-flex align-items-center mx-3">
-                        <div class="search-icon"><img src="assets/images/search.png" /></div>
-                        <input type="search" class="form-control btn btn-primary text-uppercase rounded-pill mx-2" />
-                    </div>
-                    <button type="button" class="btn btn-primary text-uppercase">Đăng nhập</button>
-                </div>
-            </div>
+          </div>
         </div>
-    </nav>
+      </nav>
     <!-- NAVBAR -->
 
 
@@ -76,7 +76,7 @@
                 <div class="col-12 col-md-12 game-hero-banner">
                     <h3 class="my-3">GAME UPDATES</h3>
                     <h2 class="primary-color my-3 heading">SEASON 2024 UPDATES</h2>
-                    <p class="my-3">Some images and details on this page may no longer be accurate in Season 2024. Take
+                    <p class="my-3 text-white">Some images and details on this page may no longer be accurate in Season 2024. Take
                         a look at the 2024 Gameplay Preview for the latest information.</p>
 
                 </div>
@@ -107,7 +107,7 @@
                     <div class="col-12 col text-center">
                         <h3 class="my-3">WELCOME TO THE RIFT</h3>
                         <h2 class="primary-color my-3 heading">LEARN THE BASICS</h2>
-                        <p class="my-3">There’s a lot to learn about League, so we’ll start with the essentials. Explore
+                        <p class="my-3 text-white">There’s a lot to learn about League, so we’ll start with the essentials. Explore
                             the guide below to get the rundown on the most popular game mode.</p>
                     </div>
                 </div>
@@ -121,34 +121,52 @@
             <div class="row py-5">
                 <div class="col-12 col-sm-6 col text-center">
                     <h2 class="primary-color my-3 heading">DESTROY THE BASE</h2>
-                    <p class="my-3">The Nexus is the heart of both teams’ bases. Destroy the enemy’s Nexus first to win the game.</p>
-    
+                    <p class="my-3 text-white">The Nexus is the heart of both teams’ bases. Destroy the enemy’s Nexus first to win
+                        the game.</p>
+
                     <div class="row justify-content-center py-5">
                         <a id="show-your-nexus" class="col-3 col-lg-4 text-white" href="javascript:void(0);">
-                            <img src="assets/images/YOUR-button.png" alt="play" class="img-fluid"> 
-                            <h3>YOUR NEXUS</h3>
+                            <img src="assets/images/YOUR-button.png" alt="play" class="img-fluid">
+                            <h3 class="mt-2">YOUR NEXUS</h3>
                         </a>
                         <a id="show-enemy-nexus" class="col-3 col-lg-4 text-white" href="javascript:void(0);">
-                            <img src="assets/images/ENEMY-button.png" alt="play" class="img-fluid"> 
-                            <h3>ENEMY NEXUS</h3>
+                            <img src="assets/images/ENEMY-button.png" alt="play" class="img-fluid">
+                            <h3 class="mt-2">ENEMY NEXUS</h3>
                         </a>
                     </div>
-    
+
                 </div>
                 <div id="your-nexus" class="col-12 col-sm-6 text-center">
                     <img src="assets/images/YOUR.png" alt="nexus" class="img-fluid">
                     <h3 class="my-3">YOUR NEXUS</h3>
-                    <p class="my-3">Your Nexus is where minions spawn. Behind your Nexus is the Fountain, where you can quickly replenish health and mana and access the Shop.</p>
+                    <p class="my-3 text-white">Your Nexus is where minions spawn. Behind your Nexus is the Fountain, where you can
+                        quickly replenish health and mana and access the Shop.</p>
                 </div>
                 <div id="enemy-nexus" class="col-12 col-sm-6 text-center">
                     <img src="assets/images/ENEMY.png" alt="nexus" class="img-fluid">
                     <h3 class="my-3">ENEMY NEXUS</h3>
-                    <p class="my-3">Located in the enemy team’s base, the enemy Nexus is just like yours. Destroying the enemy Nexus wins your team the game.</p>
+                    <p class="my-3 text-white">Located in the enemy team’s base, the enemy Nexus is just like yours. Destroying the
+                        enemy Nexus wins your team the game.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
+
+    <section>
+        <div class="container p-4">
+            <div class="row py-5">
+                <div class="col-12 col">
+
+                </div>
+                <div class="col-12 col">
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
 
 
 
