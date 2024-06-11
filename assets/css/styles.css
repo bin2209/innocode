@@ -562,7 +562,10 @@ section {
 
 .gameplay .swiper-wrapper {
     display: flex;
+}
+.gameplay .gameplay-swiper-container-thumbs .swiper-wrapper{
     justify-content: space-around;
+
 }
 
 .gameplay-swiper-container-thumbs .swiper-slide {
