@@ -86,6 +86,9 @@ td {
 body {
     line-height: 1;
 }
+a{
+    text-decoration: none;
+}
 
 ol,
 ul {
@@ -296,7 +299,7 @@ section {
 
 .play-btn-container {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     margin-top: 20px;
 }
 
@@ -696,6 +699,19 @@ section {
      background-position: center;
     background-size: cover;
 }
+
+
+/* game section  */
+.game-section {
+    background: url(../images/game.png) no-repeat;
+    background-position: center;
+    height: calc(100vh - 80px);
+}
+.game-section .game-hero-banner{
+    padding-top: 100px;
+    text-align: left;
+}
+
 /* champions */
 .section-champions{
     background-image: url('../images/champion-bg.png');
