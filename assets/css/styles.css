@@ -699,6 +699,7 @@ section {
 
 .section-map .swiper-slide {
     opacity: 0;
+    text-align: left;
 }
 
 .section-map .swiper-slide-active {
@@ -1001,6 +1002,9 @@ footer img {
     }
     .tft .content{
         margin-top: 17em;
+    }
+    .section-map .swiper-slide {
+        width: 100%;
     }
 }
 
