@@ -270,7 +270,9 @@ section {
 
 
 
-
+ #your-nexus, #enemy-nexus {
+    display: none;
+}
 
 
 /* Homepage */
