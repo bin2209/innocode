@@ -94,7 +94,10 @@
             <div class="container p-4">
                 <div class="row  py-5">
                     <div class="col-12 col text-center">
+
                         <div class="search d-flex align-items-center mx-3">
+                            <h2 class="">Try again</h2>
+
                             <div class="search-icon"><img src="assets/images/search.png"></div>
                             <input id="re-search" type="search" class="form-control btn btn-primary text-uppercase rounded-pill mx-2" value="">
                         </div>
@@ -134,6 +137,13 @@
             }
         });
 
+        $('#re-search').keypress(function (event) {
+            if (event.which === 13) { // Enter key pressed
+                var inputVal = $('#re-search').val();
+                window.location.href = `/search.html?s=${inputVal}`;
+            }
+        });
+
         // just for search page 
         function getQueryParam(name) {
             const urlParams = new URLSearchParams(window.location.search);
@@ -145,8 +155,7 @@
             const searchValue = getQueryParam('s');
             if (searchValue) {
                 $('#search-value').text(`Search for: ${searchValue}`);
-                $('#re-search').value(`${searchValue}`);
-
+                $('#re-search').val(searchValue);
             }
         });
     </script>
