@@ -18,54 +18,57 @@
     <!-- Import Swiper  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
     <!-- NAVBAR -->
     <nav id="legends-nav" class="legends-nav navbar navbar-expand-lg bg-body-tertiary bg-legends">
         <div class="container">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-    
-          <div class="mobile-search search">
-            <div class="search-icon"><img src="assets/images/search.png" /></div>
-            <input type="search" class="form-control btn btn-primary text-uppercase rounded-pill mx-2" />
-          </div>
-    
-    
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo.svg" alt="logo" />
-          </a>
-    
-    
-          <div class="collapse navbar-collapse justify-content-between row" id="navbarTogglerDemo03">
-            <ul class="navbar-nav col-12 col-md-5">
-              <li class="nav-item active d-flex">
-                <a class="nav-link " aria-current="page" href="game.html">Game</a>
-              </li>
-              <li class="nav-item d-flex">
-                <a class="nav-link" href="champion.html">Champion</a>
-              </li>
-              <li class="nav-item d-flex">
-                <a class="nav-link" href="#">News</a>
-              </li>
-            </ul>
-            <div class="logo col-2 text-center">
-              <a href="index.html"> <img src="assets/images/logo.svg" alt="logo"></a>
-            </div>
-            <div class="col-5 login d-flex justify-content-end align-items-center">
-              <div class="search d-flex align-items-center mx-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="mobile-search search">
                 <div class="search-icon"><img src="assets/images/search.png" /></div>
                 <input type="search" class="form-control btn btn-primary text-uppercase rounded-pill mx-2" />
-              </div>
-              <button type="button" class="btn btn-primary text-uppercase">Đăng nhập</button>
             </div>
-          </div>
+
+
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" alt="logo" />
+            </a>
+
+
+            <div class="collapse navbar-collapse justify-content-between row" id="navbarTogglerDemo03">
+                <ul class="navbar-nav col-12 col-md-5">
+                    <li class="nav-item active d-flex">
+                        <a class="nav-link " aria-current="page" href="game.html">Game</a>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <a class="nav-link" href="champion.html">Champion</a>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                </ul>
+                <div class="logo col-2 text-center">
+                    <a href="index.html"> <img src="assets/images/logo.svg" alt="logo"></a>
+                </div>
+                <div class="col-5 login d-flex justify-content-end align-items-center">
+                    <div class="search d-flex align-items-center mx-3">
+                        <div class="search-icon"><img src="assets/images/search.png" /></div>
+                        <input id="inputField" type="search"
+                            class="form-control btn btn-primary text-uppercase rounded-pill mx-2" />
+                    </div>
+                    <button type="button" class="btn btn-primary text-uppercase">Đăng nhập</button>
+                </div>
+            </div>
         </div>
-      </nav>
+    </nav>
     <!-- NAVBAR -->
 
 
@@ -76,7 +79,8 @@
                 <div class="col-12 col-md-12 game-hero-banner">
                     <h3 class="my-3">GAME UPDATES</h3>
                     <h2 class="primary-color my-3 heading">SEASON 2024 UPDATES</h2>
-                    <p class="my-3 text-white">Some images and details on this page may no longer be accurate in Season 2024. Take
+                    <p class="my-3 text-white">Some images and details on this page may no longer be accurate in Season
+                        2024. Take
                         a look at the 2024 Gameplay Preview for the latest information.</p>
 
                 </div>
@@ -107,7 +111,8 @@
                     <div class="col-12 col text-center">
                         <h3 class="my-3">WELCOME TO THE RIFT</h3>
                         <h2 class="primary-color my-3 heading">LEARN THE BASICS</h2>
-                        <p class="my-3 text-white">There’s a lot to learn about League, so we’ll start with the essentials. Explore
+                        <p class="my-3 text-white">There’s a lot to learn about League, so we’ll start with the
+                            essentials. Explore
                             the guide below to get the rundown on the most popular game mode.</p>
                     </div>
                 </div>
@@ -121,7 +126,8 @@
             <div class="row py-5">
                 <div class="col-12 col-sm-6 col text-center">
                     <h2 class="primary-color my-3 heading">DESTROY THE BASE</h2>
-                    <p class="my-4 text-white">The Nexus is the heart of both teams’ bases. Destroy the enemy’s Nexus first to win
+                    <p class="my-4 text-white">The Nexus is the heart of both teams’ bases. Destroy the enemy’s Nexus
+                        first to win
                         the game.</p>
 
                     <div class="row justify-content-center py-3">
@@ -139,13 +145,15 @@
                 <div id="your-nexus" class="col-12 col-sm-6 text-center">
                     <img src="assets/images/YOUR.png" alt="nexus" class="img-fluid">
                     <h3 class="my-3">YOUR NEXUS</h3>
-                    <p class="my-3 text-white">Your Nexus is where minions spawn. Behind your Nexus is the Fountain, where you can
+                    <p class="my-3 text-white">Your Nexus is where minions spawn. Behind your Nexus is the Fountain,
+                        where you can
                         quickly replenish health and mana and access the Shop.</p>
                 </div>
                 <div id="enemy-nexus" class="col-12 col-sm-6 text-center">
                     <img src="assets/images/ENEMY.png" alt="nexus" class="img-fluid">
                     <h3 class="my-3">ENEMY NEXUS</h3>
-                    <p class="my-3 text-white">Located in the enemy team’s base, the enemy Nexus is just like yours. Destroying the
+                    <p class="my-3 text-white">Located in the enemy team’s base, the enemy Nexus is just like yours.
+                        Destroying the
                         enemy Nexus wins your team the game.</p>
                 </div>
             </div>
@@ -158,7 +166,9 @@
             <div class="row py-5">
                 <div class="col-12 col-sm-6 col text-center">
                     <h2 class="primary-color my-3 heading">CLEAR THE PATH</h2>
-                    <p class="my-4 text-white">Your team needs to clear at least one lane to get to the enemy Nexus. Blocking your path are defense structures called turrets and inhibitors. Each lane has three turrets and one inhibitor, and each Nexus is guarded by two turrets.</p>
+                    <p class="my-4 text-white">Your team needs to clear at least one lane to get to the enemy Nexus.
+                        Blocking your path are defense structures called turrets and inhibitors. Each lane has three
+                        turrets and one inhibitor, and each Nexus is guarded by two turrets.</p>
 
                     <div class="row justify-content-center py-3">
                         <a id="show-TURRETS" class="col-3 col-lg-4 text-white" href="javascript:void(0);">
@@ -175,12 +185,16 @@
                 <div id="TURRETS" class="col-12 col-sm-6 text-center">
                     <img src="assets/images/TURRETS.png" alt="nexus" class="img-fluid">
                     <h3 class="my-3">TURRETS</h3>
-                    <p class="my-3 text-white">Turrets deal damage to enemy minions and champions, and provide limited vision from the Fog of War for their team. Attack these structures with minions ahead of you to avoid damage and charge ahead.</p>
+                    <p class="my-3 text-white">Turrets deal damage to enemy minions and champions, and provide limited
+                        vision from the Fog of War for their team. Attack these structures with minions ahead of you to
+                        avoid damage and charge ahead.</p>
                 </div>
                 <div id="INHIBITORS" class="col-12 col-sm-6 text-center">
                     <img src="assets/images/INHIBITORS.png" alt="nexus" class="img-fluid">
                     <h3 class="my-3">INHIBITORS</h3>
-                    <p class="my-3 text-white">Each Inhibitor is protected by a Turret. When destroyed, super minions will spawn in that lane for several minutes. Afterward, the Inhibitor will respawn and Super Minions will stop spawning.</p>
+                    <p class="my-3 text-white">Each Inhibitor is protected by a Turret. When destroyed, super minions
+                        will spawn in that lane for several minutes. Afterward, the Inhibitor will respawn and Super
+                        Minions will stop spawning.</p>
                 </div>
             </div>
         </div>
@@ -206,11 +220,18 @@
                 </div>
     </footer>
     <!-- footer  -->
+    <script>
+        $('#inputField').keypress(function (event) {
+            if (event.which === 13) { // Enter key pressed
+                var inputVal = $('#inputField').val();
+                window.location.href = `/search.html?s=${inputVal}`;
+            }
+        });
+    </script>
 
     <script src="assets/js/game.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
     <!-- Bootstrap JS and dependencies (Popper.js and jQuery) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

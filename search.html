@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 </head>
 
 <body>
@@ -70,57 +69,40 @@
         </div>
     </nav>
     <!-- NAVBAR -->
-    <!-- Champion-detail -->
-    <!-- Champion-detail-ID -->
 
-    <section class="section-hero champion-detail champion-detail-147">
-        <div class="container">
-            <div class="row position-absolute bottom-50 p-3 champion-name-banner-mb ">
-                <h2 id="champion-name-banner" class="col-12 primary-color px-4 px-sm-0"></h2>
-            </div>
-            <div class="row position-absolute bottom-0 translate-middle-x start-50 w-100 align-items-end">
-                <div class="col-12 col-md-12 text-center branding">
-                    <img src="assets/images/champion-147.png" alt="hero-image" class="hero-image">
+
+    <!-- homepage -->
+    <section class="section-hero search-section" style="  background: url(assets/images/search-bg.png) ">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-12 col-md-12 game-hero-banner">
+                    <h3 class="my-3">0 result</h3>
+                    <h2 class="primary-color my-3 heading" id="search-value">
+                    </h2>
+                    <p class="my-3 text-white">I don’t think that’s here, did Teemo hide it in a bush?.</p>
+
                 </div>
+               
             </div>
         </div>
     </section>
 
 
-    <!-- Champion section -->
-    <section class="section-hero champion-detail-description champion-detail-description-147">
-        <div class="overplay">
-            <div class="container p-4">
-                <div class="row my-4">
-                    <div class="col-2">
-                        <img id="champion-icon" class="rounded-circle" src="" alt="Champion Icon">
-                    </div>
-                    <div class="col-10 mx-0 row align-content-center">
-                        <h3 id="champion-title" class="col-12"></h3>
-                        <h2 id="champion-name" class="col-12 primary-color mt-2"></h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-sm-7">
-                        <p id="champion-description" class="primary-color"></p>
-                    </div>
-                    <div class="col-1 vl"></div>
 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="assets/images/role-mage.png" alt="role">
-                            </div>
-                            <div class="col-8">
-                                <h3 class="primary-color">Role</h3>
-                                <h2 id="champion-tags" class="primary-color"></h2>
-                            </div>
+    <section class="section-welcome">
+        <div class="overplay-blur">
+            <div class="container p-4">
+                <div class="row  py-5">
+                    <div class="col-12 col text-center">
+                        <div class="search d-flex align-items-center mx-3">
+                            <div class="search-icon"><img src="assets/images/search.png"></div>
+                            <input id="re-search" type="search" class="form-control btn btn-primary text-uppercase rounded-pill mx-2" value="">
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
-
 
 
 
@@ -143,43 +125,7 @@
                         vụ và/hoăc nhãn hiệu đã đăng ký của Tập Đoàn Riot Games.</p>
                 </div>
     </footer>
-    <!-- footer  -->
 
-
-
-
-    <script>
-        // Ensure script runs after DOM has fully loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            // Your asynchronous function to fetch champion data by key
-            async function fetchChampionByKey(key) {
-                try {
-                    const response = await fetch('assets/json/champions.json');
-                    const champions = await response.json();
-                    const champion = champions.find(champ => champ.key === key);
-
-                    if (champion) {
-                        // Access the DOM elements and set their content
-                        document.getElementById('champion-name-banner').textContent = champion.name;
-
-                        document.getElementById('champion-name').textContent = champion.name;
-                        document.getElementById('champion-title').textContent = champion.title;
-                        document.getElementById('champion-icon').src = champion.icon;
-                        document.getElementById('champion-description').textContent = champion.description;
-                        document.getElementById('champion-tags').textContent = '' + champion.tags
-                            .join(', ');
-                    } else {
-                        console.error('Champion not found');
-                    }
-                } catch (error) {
-                    console.error('Error fetching champion data:', error);
-                }
-            }
-
-            // Call fetchChampionByKey function with the desired key after the DOM has loaded
-            fetchChampionByKey('147');
-        });
-    </script>
     <script>
         $('#inputField').keypress(function (event) {
             if (event.which === 13) { // Enter key pressed
@@ -187,13 +133,30 @@
                 window.location.href = `/search.html?s=${inputVal}`;
             }
         });
+
+        // just for search page 
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // On page load, get the 's' query parameter and display it
+        $(document).ready(function () {
+            const searchValue = getQueryParam('s');
+            if (searchValue) {
+                $('#search-value').text(`Search for: ${searchValue}`);
+                $('#re-search').value(`${searchValue}`);
+
+            }
+        });
     </script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/swiper.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
-  <!-- Bootstrap JS and dependencies (Popper.js and jQuery) -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- footer  -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- Bootstrap JS and dependencies (Popper.js and jQuery) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
