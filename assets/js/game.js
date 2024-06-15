@@ -1,65 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-    function show(id) {
-        // Hide both sections first
-        document.getElementById('your-nexus').style.display = 'none';
-        document.getElementById('enemy-nexus').style.display = 'none';
+    function initializeSections(buttons, sections, defaultSection) {
+        // Hide all sections and remove 'active' class from all buttons
+        sections.forEach(section => document.getElementById(section).style.display = 'none');
+        buttons.forEach(button => document.getElementById(button).classList.remove('active'));
 
-        // Remove active class from both buttons
-        document.getElementById('show-your-nexus').classList.remove('active');
-        document.getElementById('show-enemy-nexus').classList.remove('active');
-
-        // Show the clicked section
-        document.getElementById(id).style.display = 'block';
-
-        // Add active class to the clicked button
-        if (id === 'your-nexus') {
-            document.getElementById('show-your-nexus').classList.add('active');
-        } else if (id === 'enemy-nexus') {
-            document.getElementById('show-enemy-nexus').classList.add('active');
-        }
+        // Show the default section and set its button as 'active'
+        document.getElementById(defaultSection).style.display = 'block';
+        document.getElementById(buttons[sections.indexOf(defaultSection)]).classList.add('active');
+        
+        // Set up onclick events for each button
+        buttons.forEach((button, index) => {
+            document.getElementById(button).onclick = function () {
+                sections.forEach(section => document.getElementById(section).style.display = 'none');
+                buttons.forEach(btn => document.getElementById(btn).classList.remove('active'));
+                
+                document.getElementById(sections[index]).style.display = 'block';
+                document.getElementById(button).classList.add('active');
+            }
+        });
     }
 
-    document.getElementById('show-your-nexus').onclick = function () {
-        show('your-nexus');
-    }
-
-    document.getElementById('show-enemy-nexus').onclick = function () {
-        show('enemy-nexus');
-    }
-
-    // Initialize by showing 'your-nexus'
-    show('your-nexus');
-
-
-
-    function show1(id) {
-        // Hide both sections first
-        document.getElementById('TURRETS').style.display = 'none';
-        document.getElementById('INHIBITORS').style.display = 'none';
-
-        // Remove active class from both buttons
-        document.getElementById('show-TURRETS').classList.remove('active');
-        document.getElementById('show-INHIBITORS').classList.remove('active');
-
-        // Show the clicked section
-        document.getElementById(id).style.display = 'block';
-
-        // Add active class to the clicked button
-        if (id === 'TURRETS') {
-            document.getElementById('show-TURRETS').classList.add('active');
-        } else if (id === 'INHIBITORS') {
-            document.getElementById('show-INHIBITORS').classList.add('active');
-        }
-    }
-
-    document.getElementById('show-TURRETS').onclick = function () {
-        show1('TURRETS');
-    }
-
-    document.getElementById('show-INHIBITORS').onclick = function () {
-        show1('INHIBITORS');
-    }
-
-    // Initialize by showing 'your-nexus'
-    show1('TURRETS');
+    // Initializing each set of sections and buttons
+    initializeSections(['show-your-nexus', 'show-enemy-nexus'], ['your-nexus', 'enemy-nexus'], 'your-nexus');
+    initializeSections(['show-TURRETS', 'show-INHIBITORS'], ['TURRETS', 'INHIBITORS'], 'TURRETS');
+    initializeSections(['show-DRAKES', 'show-BARON'], ['DRAKES', 'BARON'], 'DRAKES');
+    initializeSections(['show-top-lane', 'show-jungle-lane', 'show-mid-lane', 'show-bot-lane', 'show-support-lane'], 
+                        ['top-lane', 'jungle-lane', 'mid-lane', 'bot-lane', 'support-lane'], 'top-lane');
 });

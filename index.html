@@ -70,3 +70,63 @@
         </div>
     </nav>
     <!-- NAVBAR -->
+       <!-- homepage -->
+  <section class="section-hero">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12 col-md-12 text-center branding">
+          <img src="assets/images/lol.png" alt="hero-image" class="hero-image">
+        </div>
+        <div class="col-12 col-md-12 text-center">
+
+          <div class="play-btn-container justify-content-center">
+            <div class="outline-play-btn">
+            </div>
+            <button class="play-btn">
+              Play now
+            </button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- footer  -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col">
+          <div class="footer-logo d-flex justify-content-center">
+            <img src="assets/images/riot.png" alt="logo" height="100px">
+            <img src="assets/images/vng.png" alt="logo" height="100px">
+          </div>
+        </div>
+        <div class="col-7 m-auto text-center mt-5">
+          <p>2009-2022 by Riot Games Corporation. LEAGUE OF LEGENDS and related logos are trademarks, service marks and/or registered trademarks of Riot Games Corporation.</p>
+        </div>
+  </footer>
+  <!-- footer  -->
+
+  <script>
+    $('#inputField').keypress(function (event) {
+      if (event.which === 13) { // Enter key pressed
+        var inputVal = $('#inputField').val();
+        window.location.href = `/search.html?s=${inputVal}`;
+      }
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/swiper.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap JS and dependencies (Popper.js and jQuery) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -291,25 +291,27 @@ section {
     width: auto;
     background-size: contain !important;
     background: url(../images/buttonframe.png) no-repeat !important;
- background-position: center;}
-
-
-
- #your-nexus, #enemy-nexus, #TURRETS, #INHIBITORS{
-    display: none;
-    transition: opacity 1s ease-out;
+ background-position: center;
 }
-#show-your-nexus, #show-enemy-nexus, #show-TURRETS , #show-INHIBITORS {
+
+
+.show-btn {
+    /* display: none; */
     opacity: 0.5;
+    transition: opacity .3s ease-out;
 }
 
-#show-your-nexus:hover, #show-enemy-nexus:hover , #show-TURRETS:hover , #show-INHIBITORS:hover{
+.show-btn:hover{
     opacity: 0.7;
 }
 
-
-#show-your-nexus.active, #show-enemy-nexus.active ,  #show-TURRETS.active , #show-INHIBITORS.active{
+.show-btn.active {
     opacity: 1;
+}
+
+
+.btn-section .img-fluid{
+    /* max-width: 100px; */
 }
 
 
