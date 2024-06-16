@@ -336,7 +336,7 @@ section {
     position: relative;
 }
 
-.section-hero .play-btn {
+ .play-btn {
     width: 171px;
     top: 4px;
     height: 67px;
@@ -354,7 +354,7 @@ section {
     margin-top: 20px;
 }
 
-.section-hero .outline-play-btn {
+ .outline-play-btn {
     background: url(../images/Vector\ 5.png) no-repeat;
      background-position: center;
     width: 181px;
@@ -926,7 +926,11 @@ footer img {
     margin: 10px auto;
 }
 
-
+.champions-intro-section h3{
+    font-size: 14px;
+    justify-content: center;
+    display: flex;
+}
 /* REPONSIVE */
 @media (max-width: 991.98px) {
     h2 {
