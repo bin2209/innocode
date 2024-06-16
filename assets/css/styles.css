@@ -293,10 +293,15 @@ section {
     background: url(../images/buttonframe.png) no-repeat !important;
  background-position: center;
 }
+#champion-background{
+    background-size: cover !important;
+    background-position: center !important;
 
+}
 .normal-section {
     height: calc(100vh - 80px);
     margin-top: 80px;
+    /* background-position: center; */
 }
 .skill-section{
     padding: 100px 0;
