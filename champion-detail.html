@@ -88,132 +88,208 @@
 
 
     <!-- Champion section -->
-    <section  class="section-hero champion-detail-description ">
+    <section class="section-hero champion-detail-description ">
         <div id="champion-overplay" class="overplay">
-           
-            </div>
-            <div  class="container champion-content p-4">
-                <div class="row my-4">
-                    <div class="col-2">
-                        <img id="champion-icon" class="rounded-circle" src="" alt="Champion Icon">
-                    </div>
-                    <div class="col-10 mx-0 row align-content-center">
-                        <h3 id="champion-title" class="col-12"></h3>
-                        <h2 id="champion-name" class="col-12 primary-color mt-2"></h2>
-                    </div>
+        </div>
+        <div class="container champion-content p-4">
+            <div class="row my-4">
+                <div class="col-2">
+                    <img id="champion-icon" class="rounded-circle" src="" alt="Champion Icon">
                 </div>
-                <div class="row">
-                    <div class="col-12 col-sm-7">
-                        <p id="champion-description" class="primary-color"></p>
-                    </div>
-                    <div class="col-1 vl"></div>
+                <div class="col-10 mx-0 row align-content-center">
+                    <h3 id="champion-title" class="col-12"></h3>
+                    <h2 id="champion-name" class="col-12 primary-color mt-2"></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-7">
+                    <p id="champion-description" class="primary-color"></p>
+                </div>
+                <div class="col-1 vl"></div>
 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="assets/images/role-mage.png" alt="role">
-                            </div>
-                            <div class="col-8">
-                                <h3 class="primary-color">Role</h3>
-                                <h2 id="champion-tags" class="primary-color"></h2>
-                            </div>
+                <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="assets/images/role-mage.png" alt="role">
+                        </div>
+                        <div class="col-8">
+                            <h3 class="primary-color">Role</h3>
+                            <h2 id="champion-tags" class="primary-color"></h2>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
 
+    <section class="skill-section">
+        <div class="container">
+            <div class="row bottom-50 p-3 champion-name-banner-mb ">
+                <h2 class="col-12 primary-color px-4 px-sm-0">Skill</h2>
+            </div>
+            <div class="row">
 
-
-
-
+            </div>
+        </div>
+    </section>
 
     <!-- footer  -->
     <footer>
         <div class="container">
-          <div class="row">
-            <div class="col-12 col">
-              <div class="footer-logo d-flex justify-content-center">
-                <img src="assets/images/riot.png" alt="logo" height="100px">
-                <img src="assets/images/vng.png" alt="logo" height="100px">
-              </div>
-            </div>
-            <div class="col-7 m-auto text-center mt-5">
-              <p>2009-2022 by Riot Games Corporation. LEAGUE OF LEGENDS and related logos are trademarks, service marks and/or registered trademarks of Riot Games Corporation.</p>
-            </div>
-      </footer>
+            <div class="row">
+                <div class="col-12 col">
+                    <div class="footer-logo d-flex justify-content-center">
+                        <img src="assets/images/riot.png" alt="logo" height="100px">
+                        <img src="assets/images/vng.png" alt="logo" height="100px">
+                    </div>
+                </div>
+                <div class="col-7 m-auto text-center mt-5">
+                    <p>2009-2022 by Riot Games Corporation. LEAGUE OF LEGENDS and related logos are trademarks, service
+                        marks and/or registered trademarks of Riot Games Corporation.</p>
+                </div>
+    </footer>
     <!-- footer  -->
 
 
 
 
     <script>
-// Ensure script runs after DOM has fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Function to extract key from URL
-    function getKeyFromUrl() {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get('key');
-    }
-
-    // Function to remove special characters and spaces from a string
-function formatName(name) {
-    return name.replace(/[^a-zA-Z0-9]/g, '');
-}
-    // Asynchronous function to fetch champion data by key
-    async function fetchChampionByKey(key) {
-        try {
-            const response = await fetch('/assets/data/en_US/champion.json');
-            const data = await response.json();
-            const champions = Object.values(data.data); // Convert the champions object to an array
-            const champion = champions.find(champ => champ.key === key);
-
-            if (champion) {
-              
-               
-
-                // Access the DOM elements and set their content
-                document.getElementById('champion-name-banner').textContent = champion.name;
-                document.getElementById('champion-name').textContent = champion.name;
-                document.getElementById('champion-title').textContent = champion.title;
-                document.getElementById('champion-icon').src = `/assets/data-img/champion/${champion.image.full}`;
-                document.getElementById('champion-description').textContent = champion.blurb;
-                document.getElementById('champion-tags').textContent = champion.tags.join(', ');
-
-
-
-                const formattedName = formatName(champion.name);
-                console.log(formattedName);
-                  // Set background image of the champion-background section
-                const championBackground = document.getElementById('champion-background');
-                championBackground.style.background = `url(/assets/data-img/champion-more/splash/${formattedName}_0.jpg`;
-                championBackground.style.backgroundSize = 'cover'; 
-
-
-                const championOverplay = document.getElementById('champion-overplay');
-                championOverplay.style.background = `url(/assets/data-img/champion-more/splash/${formattedName}_1.jpg`;
-
-                // Optional: Cover the entire area
-            } else {
-                console.error('Champion not found');
+        // Ensure script runs after DOM has fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to extract champion name from URL
+            function getNameFromUrl() {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get('n');
             }
-        } catch (error) {
-            console.error('Error fetching champion data:', error);
-        }
-    }
 
-    // Extract the key from the URL and call fetchChampionByKey function
-    const key = getKeyFromUrl();
-    console.log(key);
-    if (key) {
-        fetchChampionByKey(key);
-    } else {
-        console.error('No key found in URL');
-    }
-});
+            // Function to remove special characters and spaces from a string
+            function formatName(championName) {
+                return championName.replace(/[^a-zA-Z0-9]/g, '');
+            }
+
+            // Asynchronous function to fetch champion data by name
+            async function fetchChampionByName(championName) {
+                try {
+                    // Fetch the champion data
+                    const response = await fetch(`/assets/data/en_US/champion/${championName}.json`);
+                    const data = await response.json();
+                    const champions = Object.values(data.data); // Convert the champions object to an array
+                    const champion = champions.find(champ => formatName(champ.name) === championName);
+
+                    if (champion) {
+                        // Access the DOM elements and set their content
+                        document.getElementById('champion-name-banner').textContent = champion.name;
+                        document.getElementById('champion-name').textContent = champion.name;
+                        document.getElementById('champion-title').textContent = champion.title;
+                        document.getElementById('champion-icon').src =
+                            `/assets/data-img/champion/${champion.image.full}`;
+                        document.getElementById('champion-description').textContent = champion.blurb;
+                        document.getElementById('champion-tags').textContent = champion.tags.join(', ');
+
+                        const formattedName = formatName(champion.name);
+                        // Set background image of the champion-background section
+                        const championBackground = document.getElementById('champion-background');
+                        championBackground.style.background =
+                            `url(/assets/data-img/champion-more/splash/${formattedName}_0.jpg`;
+                        championBackground.style.backgroundSize = 'cover';
+
+                        const championOverplay = document.getElementById('champion-overplay');
+                        championOverplay.style.background =
+                            `url(/assets/data-img/champion-more/splash/${formattedName}_1.jpg`;
+
+                        // Optional: Cover the entire area
+
+                        // SKILL
+                        displaySkills(champion.spells);
 
 
+                    } else {
+                        console.error('Champion not found');
+                    }
+                } catch (error) {
+                    console.error('Error fetching champion data:', error);
+                }
+
+                
+                // Xử lý ảnh skill
+                function formatSkillSrc(skillSrc, championName) {
+                    skillSrc = skillSrc.replace(championName, '');
+                    return skillSrc;
+                }
+
+                // Function to display skills in the HTML
+                function displaySkills(spells) {
+                    const skillSection = document.querySelector('.skill-section .container');
+                    const skillRow = document.createElement('div');
+                    skillRow.className = 'row';
+
+                    // Create a div for each skill (Passive, Q, W, E, R)
+                    const skillNames = ['Passive', 'Q', 'W', 'E', 'R'];
+                    skillNames.forEach((skillName, index) => {
+                        const skillDiv = document.createElement('div');
+                        skillDiv.className = 'col-12 col-md-6 col-lg-4 skill p-4';
+
+                        const skillHeader = document.createElement('h3');
+                        skillHeader.textContent = skillName;
+                        skillDiv.appendChild(skillHeader);
+
+                        if (skillName !== 'Passive') {
+                            const skill = spells[index -
+                            1]; // spells array starts from 0 index but we skip the passive
+
+
+
+                            // Get and display the skill image
+                            const skillImage = document.createElement('img');
+                            skillImage.src = `/assets/data-img/spell/${skill.image.full}`;
+                            skillDiv.appendChild(skillImage);
+                            skillImage.alt = skill.name;
+
+
+                            const skillDescription = document.createElement('p');
+                            skillDescription.textContent = skill.description;
+                            skillDiv.appendChild(skillDescription);
+
+                            const skillCooldown = document.createElement('p');
+                            skillCooldown.textContent = `Cooldown: ${skill.cooldownBurn}`;
+                            skillDiv.appendChild(skillCooldown);
+
+                            const skillCost = document.createElement('p');
+                            skillCost.textContent = `Cost: ${skill.costBurn}`;
+                            skillDiv.appendChild(skillCost);
+
+                            const skillTooltip = document.createElement('p');
+                            skillTooltip.innerHTML = skill.tooltip;
+                            skillDiv.appendChild(skillTooltip);
+
+
+                            console.log(skillImage.src);
+
+
+
+                        }
+
+                        skillRow.appendChild(skillDiv);
+                    });
+
+                    skillSection.appendChild(skillRow);
+                }
+
+
+
+
+            }
+
+            // Extract the champion name from the URL and call fetchChampionByName function
+            const championName = getNameFromUrl();
+            console.log(championName);
+            if (championName) {
+                fetchChampionByName(championName);
+            } else {
+                console.error('No champion name found in URL');
+            }
+        });
     </script>
     <script>
         $('#inputField').keypress(function (event) {
@@ -223,12 +299,12 @@ function formatName(name) {
             }
         });
     </script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/swiper.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
-  <!-- Bootstrap JS and dependencies (Popper.js and jQuery) -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- Bootstrap JS and dependencies (Popper.js and jQuery) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

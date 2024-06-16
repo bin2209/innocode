@@ -298,6 +298,16 @@ section {
     height: calc(100vh - 80px);
     margin-top: 80px;
 }
+.skill-section{
+    padding: 100px 0;
+}
+.skill-section h3{
+    color: #FFDB7E;
+}
+.skill-section p{
+    padding: 5px 0;
+    color: white;
+}
 #champion-overplay{
     position: absolute !important;
     width: 100%;
