@@ -73,14 +73,14 @@
     <!-- Champion-detail -->
     <!-- Champion-detail-ID -->
 
-    <section class="section-hero champion-detail champion-detail-147">
+    <section id="champion-background" class="normal-section">
         <div class="container">
             <div class="row position-absolute bottom-50 p-3 champion-name-banner-mb ">
                 <h2 id="champion-name-banner" class="col-12 primary-color px-4 px-sm-0"></h2>
             </div>
             <div class="row position-absolute bottom-0 translate-middle-x start-50 w-100 align-items-end">
                 <div class="col-12 col-md-12 text-center branding">
-                    <img src="assets/images/champion-147.png" alt="hero-image" class="hero-image">
+                    <!-- <img src="assets/images/champion-147.png" alt="hero-image" class="hero-image"> -->
                 </div>
             </div>
         </div>
@@ -88,9 +88,11 @@
 
 
     <!-- Champion section -->
-    <section class="section-hero champion-detail-description champion-detail-description-147">
-        <div class="overplay">
-            <div class="container p-4">
+    <section  class="section-hero champion-detail-description ">
+        <div id="champion-overplay" class="overplay">
+           
+            </div>
+            <div  class="container champion-content p-4">
                 <div class="row my-4">
                     <div class="col-2">
                         <img id="champion-icon" class="rounded-circle" src="" alt="Champion Icon">
@@ -147,37 +149,71 @@
 
 
     <script>
-        // Ensure script runs after DOM has fully loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            // Your asynchronous function to fetch champion data by key
-            async function fetchChampionByKey(key) {
-                try {
-                    const response = await fetch('assets/json/champions.json');
-                    const champions = await response.json();
-                    const champion = champions.find(champ => champ.key === key);
+// Ensure script runs after DOM has fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Function to extract key from URL
+    function getKeyFromUrl() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('key');
+    }
 
-                    if (champion) {
-                        // Access the DOM elements and set their content
-                        document.getElementById('champion-name-banner').textContent = champion.name;
+    // Function to remove special characters and spaces from a string
+function formatName(name) {
+    return name.replace(/[^a-zA-Z0-9]/g, '');
+}
+    // Asynchronous function to fetch champion data by key
+    async function fetchChampionByKey(key) {
+        try {
+            const response = await fetch('/assets/data/en_US/champion.json');
+            const data = await response.json();
+            const champions = Object.values(data.data); // Convert the champions object to an array
+            const champion = champions.find(champ => champ.key === key);
 
-                        document.getElementById('champion-name').textContent = champion.name;
-                        document.getElementById('champion-title').textContent = champion.title;
-                        document.getElementById('champion-icon').src = champion.icon;
-                        console.log(champion.icon);
-                        document.getElementById('champion-description').textContent = champion.description;
-                        document.getElementById('champion-tags').textContent = '' + champion.tags
-                            .join(', ');
-                    } else {
-                        console.error('Champion not found');
-                    }
-                } catch (error) {
-                    console.error('Error fetching champion data:', error);
-                }
+            if (champion) {
+              
+               
+
+                // Access the DOM elements and set their content
+                document.getElementById('champion-name-banner').textContent = champion.name;
+                document.getElementById('champion-name').textContent = champion.name;
+                document.getElementById('champion-title').textContent = champion.title;
+                document.getElementById('champion-icon').src = `/assets/data-img/champion/${champion.image.full}`;
+                document.getElementById('champion-description').textContent = champion.blurb;
+                document.getElementById('champion-tags').textContent = champion.tags.join(', ');
+
+
+
+                const formattedName = formatName(champion.name);
+                console.log(formattedName);
+                  // Set background image of the champion-background section
+                const championBackground = document.getElementById('champion-background');
+                championBackground.style.background = `url(/assets/data-img/champion-more/splash/${formattedName}_0.jpg`;
+                championBackground.style.backgroundSize = 'cover'; 
+
+
+                const championOverplay = document.getElementById('champion-overplay');
+                championOverplay.style.background = `url(/assets/data-img/champion-more/splash/${formattedName}_1.jpg`;
+
+                // Optional: Cover the entire area
+            } else {
+                console.error('Champion not found');
             }
+        } catch (error) {
+            console.error('Error fetching champion data:', error);
+        }
+    }
 
-            // Call fetchChampionByKey function with the desired key after the DOM has loaded
-            fetchChampionByKey('147');
-        });
+    // Extract the key from the URL and call fetchChampionByKey function
+    const key = getKeyFromUrl();
+    console.log(key);
+    if (key) {
+        fetchChampionByKey(key);
+    } else {
+        console.error('No key found in URL');
+    }
+});
+
+
     </script>
     <script>
         $('#inputField').keypress(function (event) {
