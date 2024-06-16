@@ -17,10 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('scroll', onScroll);
-
-   
 });
 
 
 
    
+// Function to remove special characters and spaces from a string
+function formatName(name) {
+    return name.replace(/[^a-zA-Z0-9]/g, '');
+}
