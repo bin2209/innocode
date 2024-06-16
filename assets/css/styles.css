@@ -926,11 +926,12 @@ footer img {
     margin: 10px auto;
 }
 
-.champions-intro-section h3{
+.champions-intro-section .show-btn h3{
     font-size: 14px;
     justify-content: center;
     display: flex;
 }
+
 /* REPONSIVE */
 @media (max-width: 991.98px) {
     h2 {
