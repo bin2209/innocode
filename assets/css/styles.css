@@ -313,12 +313,19 @@ section {
     padding: 5px 0;
     color: white;
 }
+.skill-section img{
+    border: 1px solid #FFDB7E;
+    margin: 20px 0;
+}
 .skin-section .skin-slide h3{
     color: #fff;
     text-transform: capitalize;
     margin-top: 20px;
 }
-
+.skin-section{
+    background: url(../images/champion-description.png) no-repeat;
+    background-position: center;
+}
 .skin-section .swiper-container {
     width: 100%;
     height: 100%;

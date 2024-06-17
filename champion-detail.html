@@ -150,6 +150,8 @@
 
 
     <section class="skin-section">
+        <div id="skin-overplay" class="overplay">
+        
         <div class="container">
             <div class="row bottom-50 p-3 champion-name-banner-mb ">
                 <h2 class="col-12 primary-color px-4 px-sm-0">Skin</h2>
@@ -164,6 +166,30 @@
                     <!-- Add Navigation -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment section -->
+    <section class="equipment-section">
+        <div class="container champion-content p-4">
+
+            <div class="row">
+                <div class="col-12 col-sm-7">
+                    <div id="equipment-list"> </div>
+                </div>
+
+                <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                    <div class="row">
+                        <div class="col-9">
+                            <div id="equipment"></div>
+                        </div>
+                        <div class="col-3">
+                            <h2 class="primary-color">Equipment</h2>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -237,8 +263,7 @@
                         // Display skills and passive
                         displaySkills(champion.passive, champion.spells);
                         // Display skins
-                        // Populate the Swiper with skins
-                        displaySkins(champion.skins, champion.name);
+
 
                         // Initialize Swiper
                         const swiper = new Swiper('.swiper-container', {
@@ -266,6 +291,22 @@
 
                         });
 
+                        // Populate the Swiper with skins
+                        displaySkins(champion.skins, champion.name);
+
+                        // Display equipment
+                        // Display equipment if blocks exist
+                        if (champion.recommended && Array.isArray(champion.recommended)) {
+                    champion.recommended.forEach(recommendation => {
+                        if (recommendation.blocks && Array.isArray(recommendation.blocks)) {
+                            displayEquipment(recommendation.blocks);
+                        } else {
+                            console.error('Blocks data is missing or invalid in recommendation');
+                        }
+                    });
+                } else {
+                    console.error('Recommended data is missing or invalid');
+                }
                     } else {
                         console.error('Champion not found');
                     }
@@ -274,11 +315,7 @@
                 }
 
 
-                // Xử lý ảnh skill
-                function formatSkillSrc(skillSrc, championName) {
-                    skillSrc = skillSrc.replace(championName, '');
-                    return skillSrc;
-                }
+
 
                 // Function to display skills in the HTML
                 function displaySkills(passive, spells) {
@@ -335,11 +372,8 @@
 
                         skillRow.appendChild(skillDiv);
                     });
-
                     skillSection.appendChild(skillRow);
                 }
-
-
             }
 
 
@@ -358,6 +392,38 @@
                     slide.appendChild(skinImage);
                     slide.appendChild(skinName);
                     swiperWrapper.appendChild(slide);
+                });
+            }
+
+            // Function to display equipment
+            function displayEquipment(blocks) {
+                const equipmentList = document.getElementById('equipment-list');
+                blocks.forEach(block => {
+                    const blockDiv = document.createElement('div');
+                    blockDiv.className = 'equipment-block row my-4';
+
+                    const blockTitle = document.createElement('h3');
+                    blockTitle.textContent = block.type.charAt(0).toUpperCase() + block.type.slice(1);
+                    blockTitle.className = 'mb-4';
+                    blockDiv.appendChild(blockTitle);
+
+                    block.items.forEach(item => {
+                        const itemDiv = document.createElement('div');
+                        itemDiv.className = 'item col';
+
+                        const itemImage = document.createElement('img');
+                        itemImage.src = `/assets/data-img/item/${item.id}.png`;
+                        itemImage.alt = `Item ${item.id}`;
+                        itemDiv.appendChild(itemImage);
+
+                        const itemCount = document.createElement('span');
+                        itemCount.textContent = `x${item.count}`;
+                        itemDiv.appendChild(itemCount);
+
+                        blockDiv.appendChild(itemDiv);
+                    });
+
+                    equipmentList.appendChild(blockDiv);
                 });
             }
 
