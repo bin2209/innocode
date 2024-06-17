@@ -173,6 +173,14 @@ section {
     background-color: #fff; /* Adjust as necessary */
     transition: all 0.3s ease-in-out;
 }
+.legends-nav .badge{
+    position: absolute;
+    background: #c3902c;
+    margin: 0 0em 2em 9.5em;
+    padding: 4px 10px;
+    font-size: 10px;
+    border-radius: 20px;
+}
 
 #legends-nav.fixed {
     background: #1a264580 !important;
