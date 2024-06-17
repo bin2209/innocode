@@ -178,7 +178,7 @@
 
             <div class="row">
                 <div class="col-12 col-sm-8">
-                    <div id="equipment-list"> </div>
+                    <div id="equipment-list" class="row"> </div>
                 </div>
 
                 <div class="col-12 col-sm-3 mt-4 mt-sm-0">
@@ -446,31 +446,41 @@
             function displayEquipment(blocks) {
                 const equipmentList = document.getElementById('equipment-list');
                 blocks.forEach(block => {
-                    const blockDiv = document.createElement('div');
-                    blockDiv.className = 'equipment-block row my-4';
+                    if (block.type != 'consumables') {
+                      
+                        const colBlock = document.createElement('div');
+                        colBlock.className = 'col-3';
 
-                    const blockTitle = document.createElement('h3');
-                    blockTitle.textContent = block.type.charAt(0).toUpperCase() + block.type.slice(1);
-                    blockTitle.className = 'mb-4';
-                    blockDiv.appendChild(blockTitle);
+                        const blockDiv = document.createElement('div');
 
-                    block.items.forEach(item => {
-                        const itemDiv = document.createElement('div');
-                        itemDiv.className = 'item col';
+                        blockDiv.className = 'equipment-block col-2 my-4';
 
-                        const itemImage = document.createElement('img');
-                        itemImage.src = `/assets/data-img/item/${item.id}.png`;
-                        itemImage.alt = `Item ${item.id}`;
-                        itemDiv.appendChild(itemImage);
+                        const blockTitle = document.createElement('h3');
+                        blockTitle.textContent = block.type.charAt(0).toUpperCase() + block.type.slice(
+                            1);
+                        blockTitle.className = 'mb-4';
+                        blockDiv.appendChild(blockTitle);
 
-                        const itemCount = document.createElement('span');
-                        itemCount.textContent = `x${item.count}`;
-                        itemDiv.appendChild(itemCount);
+                        block.items.forEach(item => {
+                            const itemDiv = document.createElement('div');
+                            itemDiv.className = 'item';
 
-                        blockDiv.appendChild(itemDiv);
-                    });
+                            const itemImage = document.createElement('img');
+                            itemImage.src = `/assets/data-img/item/${item.id}.png`;
+                            itemImage.alt = `Item ${item.id}`;
+                            itemDiv.appendChild(itemImage);
 
-                    equipmentList.appendChild(blockDiv);
+                            const itemCount = document.createElement('p');
+                            itemCount.textContent = `x${item.count}`;
+                            itemDiv.appendChild(itemCount);
+
+                            blockDiv.appendChild(itemDiv);
+                            colBlock.appendChild(blockDiv);
+                        });
+
+                        equipmentList.appendChild(colBlock);
+                    }
+
                 });
             }
 

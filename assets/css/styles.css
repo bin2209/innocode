@@ -321,7 +321,7 @@ section {
     padding: 5px 0;
     color: white;
 }
-.skill-section img{
+.skill-section img, #equipment-list img{
     border: 1px solid #FFDB7E;
     margin: 20px 0;
 }
@@ -1021,6 +1021,9 @@ footer img {
 
 /* REPONSIVE */
 @media (max-width: 991.98px) {
+    .skin-section .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+        top: 0px !important;
+    }
     .legends-btn h3{
         font-size: 14px;
     }
