@@ -16,7 +16,7 @@
         rel="stylesheet">
 
     <!-- Import Swiper  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -151,7 +151,7 @@
 
 
     <section class="skin-section">
-        <div id="skin-overplay" class="overplay">
+        <div id="skin-overplay" class="overplay"></div>
 
             <div class="container px-4">
                 <div class="row bottom-50 p-3 champion-name-banner-mb ">
@@ -280,6 +280,14 @@
                             autoplay: {
                                 delay: 2000,
                             },
+                            on: {
+                                init: function () {
+                                    updateSectionBackground();
+                                },
+                                slideChangeTransitionEnd: function () {
+                                    updateSectionBackground();
+                                }
+                            }
 
                         });
 
@@ -414,6 +422,20 @@
                 }
             }
 
+
+            // Update the background image of .section-map based on the active slide
+            function updateSectionBackground() {
+                var activeSkinImage = document.querySelector('.skin-slide.swiper-slide-active img');
+                var imageSrc = activeSkinImage ? activeSkinImage.src : null;
+
+                if (imageSrc) {
+                    var sectionMap = document.getElementById('skin-overplay');
+                    sectionMap.style.backgroundImage = 'url(' + imageSrc + ')';
+
+                } else {
+                    console.error('imageSrc attribute not found on the active slide');
+                }
+            }
 
             // Function to display skins in the Swiper
             function displaySkins(skins, championName) {

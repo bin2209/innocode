@@ -311,8 +311,16 @@ section {
     margin-top: 80px;
     /* background-position: center; */
 }
-.skill-section, .skin-section{
+.skill-section{
     padding: 100px 0;
+    position: relative;
+}
+.skin-section{
+    position: relative;
+}
+.skin-section .container{
+    padding: 100px 0;
+    position: relative;
 }
 .skill-section h3{
     color: #FFDB7E;
@@ -320,6 +328,17 @@ section {
 .skill-section p{
     padding: 5px 0;
     color: white;
+}
+#skin-overplay {
+    padding: 100px 0;
+    background-size: cover;
+    opacity: .7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.skin-slide.swiper-slide-active img{
+    border: 1px solid #FFDB7E;
 }
 .skill-section img, #equipment-list img{
     border: 1px solid #FFDB7E;
