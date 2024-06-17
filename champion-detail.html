@@ -20,9 +20,23 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+
 </head>
 
 <body>
+    <style>
+        .owl-carousel .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .owl-carousel .item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
     <!-- NAVBAR -->
     <nav id="legends-nav" class="legends-nav navbar navbar-expand-lg bg-body-tertiary bg-legends">
         <div class="container">
@@ -134,6 +148,28 @@
         </div>
     </section>
 
+
+    <section class="skin-section">
+        <div class="container">
+            <div class="row bottom-50 p-3 champion-name-banner-mb ">
+                <h2 class="col-12 primary-color px-4 px-sm-0">Skin</h2>
+            </div>
+            <div class="row">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slides will be dynamically added here -->
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- footer  -->
     <footer>
         <div class="container">
@@ -198,11 +234,37 @@
                         championOverplay.style.background =
                             `url(/assets/data-img/champion-more/splash/${formattedName}_1.jpg`;
 
-                        // Optional: Cover the entire area
+                        // Display skills and passive
+                        displaySkills(champion.passive, champion.spells);
+                        // Display skins
+                        // Populate the Swiper with skins
+                        displaySkins(champion.skins, champion.name);
 
-                        // SKILL
-                        displaySkills(champion.spells);
+                        // Initialize Swiper
+                        const swiper = new Swiper('.swiper-container', {
+                            loop: true,
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                            slidesPerView: 1,
+                            breakpoints: {
+                                600: {
+                                    slidesPerView: 3
+                                },
+                                // 1000: {
+                                //     slidesPerView: 5
+                                // }
+                            },
+                            autoplay: {
+                                delay: 2000,
+                            },
 
+                        });
 
                     } else {
                         console.error('Champion not found');
@@ -211,7 +273,7 @@
                     console.error('Error fetching champion data:', error);
                 }
 
-                
+
                 // Xử lý ảnh skill
                 function formatSkillSrc(skillSrc, championName) {
                     skillSrc = skillSrc.replace(championName, '');
@@ -219,7 +281,7 @@
                 }
 
                 // Function to display skills in the HTML
-                function displaySkills(spells) {
+                function displaySkills(passive, spells) {
                     const skillSection = document.querySelector('.skill-section .container');
                     const skillRow = document.createElement('div');
                     skillRow.className = 'row';
@@ -234,18 +296,25 @@
                         skillHeader.textContent = skillName;
                         skillDiv.appendChild(skillHeader);
 
-                        if (skillName !== 'Passive') {
+                        if (skillName === 'Passive') {
+                            // Display passive details
+                            const passiveImage = document.createElement('img');
+                            passiveImage.src = `/assets/data-img/passive/${passive.image.full}`;
+                            passiveImage.alt = passive.name;
+                            skillDiv.appendChild(passiveImage);
+
+                            const passiveDescription = document.createElement('p');
+                            passiveDescription.textContent = passive.description;
+                            skillDiv.appendChild(passiveDescription);
+                        } else {
                             const skill = spells[index -
-                            1]; // spells array starts from 0 index but we skip the passive
+                                1]; // spells array starts from 0 index but we skip the passive
 
-
-
-                            // Get and display the skill image
+                            // Display skill details
                             const skillImage = document.createElement('img');
                             skillImage.src = `/assets/data-img/spell/${skill.image.full}`;
-                            skillDiv.appendChild(skillImage);
                             skillImage.alt = skill.name;
-
+                            skillDiv.appendChild(skillImage);
 
                             const skillDescription = document.createElement('p');
                             skillDescription.textContent = skill.description;
@@ -262,12 +331,6 @@
                             const skillTooltip = document.createElement('p');
                             skillTooltip.innerHTML = skill.tooltip;
                             skillDiv.appendChild(skillTooltip);
-
-
-                            console.log(skillImage.src);
-
-
-
                         }
 
                         skillRow.appendChild(skillDiv);
@@ -277,8 +340,25 @@
                 }
 
 
+            }
 
 
+            // Function to display skins in the Swiper
+            function displaySkins(skins, championName) {
+                const swiperWrapper = document.querySelector('.swiper-wrapper');
+                skins.forEach(skin => {
+                    const slide = document.createElement('div');
+                    slide.className = 'swiper-slide skin-slide';
+                    const skinImage = document.createElement('img');
+                    skinImage.src =
+                        `/assets/data-img/champion-more/splash/${championName}_${skin.num}.jpg`;
+                    skinImage.alt = skin.name;
+                    const skinName = document.createElement('h3');
+                    skinName.textContent = skin.name;
+                    slide.appendChild(skinImage);
+                    slide.appendChild(skinName);
+                    swiperWrapper.appendChild(slide);
+                });
             }
 
             // Extract the champion name from the URL and call fetchChampionByName function

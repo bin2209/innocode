@@ -303,7 +303,7 @@ section {
     margin-top: 80px;
     /* background-position: center; */
 }
-.skill-section{
+.skill-section, .skin-section{
     padding: 100px 0;
 }
 .skill-section h3{
@@ -313,6 +313,27 @@ section {
     padding: 5px 0;
     color: white;
 }
+.skin-section .skin-slide h3{
+    color: #fff;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.skin-section .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.skin-section .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.skin-section .swiper-slide img {
+    max-width: 100%;
+    height: auto;
+}
+
 #champion-overplay{
     position: absolute !important;
     width: 100%;
