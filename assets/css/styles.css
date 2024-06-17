@@ -836,7 +836,7 @@ section {
     height: 58px;
     text-align: left;
     width: 100%;
-    padding: 3px 0 15px 62px;
+    padding: 3px 0 15px 50px;
     text-transform: uppercase;
 }
 
@@ -968,6 +968,12 @@ footer img {
 
 /* REPONSIVE */
 @media (max-width: 991.98px) {
+    .legends-btn h3{
+        font-size: 14px;
+    }
+    .legends-btn button{
+        padding: 0px 0 24px 35px;
+    }
     h2 {
         font-size: 26px;
     }

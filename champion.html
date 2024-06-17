@@ -104,7 +104,7 @@
   <section class="section-champions px-3">
     <div class="container ">
       <data id="champions-filter" class="row">
-        <div class="col-3 mb-3">
+        <div class="col-6 col-md-3 col-lg-3 mb-3">
           <div class="legends-btn">
             <button onclick="filterChampions('All')">
               <h3>All</h3>
@@ -112,7 +112,7 @@
           </div>
         </div>
 
-        <div class="col-3 mb-3">
+        <div class="col-6 col-md-3 col-lg-3 mb-3">
           <div class="legends-btn">
             <button onclick="filterChampions('Assassin')">
               <h3>Assassin</h3>
@@ -120,7 +120,7 @@
           </div>
         </div>
 
-        <div class="col-3 mb-3">
+        <div class="col-6 col-md-3 col-lg-3 mb-3">
           <div class="legends-btn">
             <button onclick="filterChampions('Tank')">
               <h3>Tank</h3>
@@ -128,7 +128,7 @@
           </div>
         </div>
 
-        <div class="col-3 mb-3">
+        <div class="col-6 col-md-3 col-lg-3 mb-3">
           <div class="legends-btn">
             <button onclick="filterChampions('Support')">
               <h3>Support</h3>
@@ -136,7 +136,7 @@
           </div>
         </div>
 
-        <div class="col-3 mb-3">
+        <div class="col-6 col-md-3 col-lg-3 mb-3">
           <div class="legends-btn">
             <button onclick="filterChampions('Mage')">
               <h3>Mage</h3>
@@ -144,7 +144,7 @@
           </div>
         </div>
 
-        <div class="col-3 mb-3">
+        <div class="col-6 col-md-3 col-lg-3 mb-3">
           <div class="legends-btn">
             <button onclick="filterChampions('Marksman')">
               <h3>Marksman</h3>
@@ -152,7 +152,7 @@
           </div>
         </div>
 
-        <div class="col-3 mb-3">
+        <div class="col-6 col-md-3 col-lg-3 mb-3">
           <div class="legends-btn">
             <button onclick="filterChampions('Fighter')">
               <h3>Fighter</h3>
@@ -193,7 +193,7 @@
           filteredChampions.forEach(champion => {
             const formattedName = formatName(champion.name);
             container.innerHTML += `
-        <div class="col-4 col-sm-2 p-3">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-3">
             <div class="champion text-center">
                 <a href="/champion-detail.html?n=${formattedName}">
                     <img src="/assets/data-img/champion-more/loading/${formattedName}_0.jpg" alt="${champion.name} icon">
