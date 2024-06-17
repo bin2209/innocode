@@ -139,7 +139,7 @@
 
 
     <section class="skill-section">
-        <div class="container">
+        <div class="container px-4">
             <div class="row bottom-50 p-3 champion-name-banner-mb ">
                 <h2 class="col-12 primary-color px-4 px-sm-0">Skill</h2>
             </div>
@@ -153,7 +153,7 @@
     <section class="skin-section">
         <div id="skin-overplay" class="overplay">
 
-            <div class="container">
+            <div class="container px-4">
                 <div class="row bottom-50 p-3 champion-name-banner-mb ">
                     <h2 class="col-12 primary-color px-4 px-sm-0">Skin</h2>
                 </div>
@@ -175,22 +175,13 @@
     <!-- Equipment section -->
     <section class="equipment-section">
         <div class="container champion-content p-4">
+            <div class="row bottom-50 p-3 champion-name-banner-mb ">
 
+                <h2 class="col-12 primary-color px-4 px-sm-0">Equipment</h2>
+            </div>
             <div class="row">
                 <div class="col-12 col-sm-8">
                     <div id="equipment-list" class="row"> </div>
-                </div>
-
-                <div class="col-12 col-sm-3 mt-4 mt-sm-0">
-                    <div class="row">
-                        <!-- <div class="col-9">
-                            <div id="equipment"></div>
-                        </div> -->
-                        <div class="col-12 d-flex justify-content-end">
-                            <h2 class="primary-color">Equipment</h2>
-
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -337,7 +328,7 @@
                             // Display passive details
                             // description left
                             const passiveDiv = document.createElement('div');
-                            passiveDiv.className = 'col-2  skill ';
+                            passiveDiv.className = 'col-3 col-sm-2 skill ';
 
                             const passiveImage = document.createElement('img');
                             passiveImage.src = `/assets/data-img/passive/${passive.image.full}`;
@@ -349,7 +340,7 @@
 
                             // description right
                             const passiveDivDecription = document.createElement('div');
-                            passiveDivDecription.className = 'col-10  skill';
+                            passiveDivDecription.className = 'col-9 col-sm-10  skill';
 
                             const skillHeader = document.createElement('h3');
                             skillHeader.innerHTML = skillName + ': <span class="text-white">' +
@@ -375,7 +366,7 @@
 
                             // Create the left column for the image
                             const skillImageDiv = document.createElement('div');
-                            skillImageDiv.className = 'col-2 skill';
+                            skillImageDiv.className = 'col-3 col-sm-2 skill';
 
                             const skillImage = document.createElement('img');
                             skillImage.src = `/assets/data-img/spell/${skill.image.full}`;
@@ -387,7 +378,7 @@
 
                             // Create the right column for the description and other details
                             const skillDetailsDiv = document.createElement('div');
-                            skillDetailsDiv.className = 'col-10 skill';
+                            skillDetailsDiv.className = 'col-9 col-sm-10  skill';
 
                             const skillHeader = document.createElement('h3');
                             skillHeader.innerHTML = skillName + ': <span class="text-white">' +
@@ -447,7 +438,7 @@
                 const equipmentList = document.getElementById('equipment-list');
                 blocks.forEach(block => {
                     if (block.type != 'consumables') {
-                      
+
                         const colBlock = document.createElement('div');
                         colBlock.className = 'col-3';
 
