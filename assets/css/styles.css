@@ -330,6 +330,23 @@ section {
     text-transform: capitalize;
     margin-top: 20px;
 }
+.skin-section .swiper-pagination{
+    top: -7px !important;
+}
+.skin-section .swiper-pagination , .skin-section .swiper-button-next , .skin-section .swiper-button-prev{
+    position: relative;
+}
+.skin-section .swiper-pagination, .skin-section .swiper-button-next{
+    right: 0 !important;
+    left: unset !important;
+    float: right;
+}
+.skin-section .swiper-pagination, .skin-section .swiper-button-prev{
+    left: 0 !important;
+    right: unset !important;
+    float: left;
+}
+
 .skin-section{
     background: url(../images/champion-description.png) no-repeat;
     background-position: center;

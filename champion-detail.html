@@ -63,7 +63,8 @@
                         <a class="nav-link " aria-current="page" href="game.html">Game</a>
                     </li>
                     <li class="nav-item d-flex">
-                        <a class="nav-link" href="champion.html">Champion</a><span class="badge badge-pill badge-success">New</span>
+                        <a class="nav-link" href="champion.html">Champion</a><span
+                            class="badge badge-pill badge-success">New</span>
                     </li>
                     <li class="nav-item d-flex">
                         <a class="nav-link" href="news.html">News</a>
@@ -151,24 +152,24 @@
 
     <section class="skin-section">
         <div id="skin-overplay" class="overplay">
-        
-        <div class="container">
-            <div class="row bottom-50 p-3 champion-name-banner-mb ">
-                <h2 class="col-12 primary-color px-4 px-sm-0">Skin</h2>
-            </div>
-            <div class="row">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- Slides will be dynamically added here -->
+
+            <div class="container">
+                <div class="row bottom-50 p-3 champion-name-banner-mb ">
+                    <h2 class="col-12 primary-color px-4 px-sm-0">Skin</h2>
+                </div>
+                <div class="row ">
+                    <div class="swiper-container ">
+                        <div class="swiper-wrapper">
+                            <!-- Slides will be dynamically added here -->
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination mt-4"></div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev "></div>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                    <!-- Add Navigation -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Equipment section -->
@@ -176,16 +177,16 @@
         <div class="container champion-content p-4">
 
             <div class="row">
-                <div class="col-12 col-sm-7">
+                <div class="col-12 col-sm-8">
                     <div id="equipment-list"> </div>
                 </div>
 
-                <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                <div class="col-12 col-sm-3 mt-4 mt-sm-0">
                     <div class="row">
-                        <div class="col-9">
+                        <!-- <div class="col-9">
                             <div id="equipment"></div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <div class="col-12 d-flex justify-content-end">
                             <h2 class="primary-color">Equipment</h2>
 
                         </div>
@@ -297,16 +298,17 @@
                         // Display equipment
                         // Display equipment if blocks exist
                         if (champion.recommended && Array.isArray(champion.recommended)) {
-                    champion.recommended.forEach(recommendation => {
-                        if (recommendation.blocks && Array.isArray(recommendation.blocks)) {
-                            displayEquipment(recommendation.blocks);
+                            champion.recommended.forEach(recommendation => {
+                                if (recommendation.blocks && Array.isArray(recommendation.blocks)) {
+                                    displayEquipment(recommendation.blocks);
+                                } else {
+                                    console.error(
+                                        'Blocks data is missing or invalid in recommendation');
+                                }
+                            });
                         } else {
-                            console.error('Blocks data is missing or invalid in recommendation');
+                            console.error('Recommended data is missing or invalid');
                         }
-                    });
-                } else {
-                    console.error('Recommended data is missing or invalid');
-                }
                     } else {
                         console.error('Champion not found');
                     }
@@ -327,50 +329,95 @@
                     const skillNames = ['Passive', 'Q', 'W', 'E', 'R'];
                     skillNames.forEach((skillName, index) => {
                         const skillDiv = document.createElement('div');
-                        skillDiv.className = 'col-12 col-md-6 col-lg-4 skill p-4';
+                        skillDiv.className = 'row skill py-4 align-items-center';
 
-                        const skillHeader = document.createElement('h3');
-                        skillHeader.textContent = skillName;
-                        skillDiv.appendChild(skillHeader);
+
 
                         if (skillName === 'Passive') {
                             // Display passive details
+                            // description left
+                            const passiveDiv = document.createElement('div');
+                            passiveDiv.className = 'col-2  skill ';
+
                             const passiveImage = document.createElement('img');
                             passiveImage.src = `/assets/data-img/passive/${passive.image.full}`;
                             passiveImage.alt = passive.name;
-                            skillDiv.appendChild(passiveImage);
+
+                            passiveDiv.appendChild(passiveImage);
+                            skillDiv.appendChild(passiveDiv);
+
+
+                            // description right
+                            const passiveDivDecription = document.createElement('div');
+                            passiveDivDecription.className = 'col-10  skill';
+
+                            const skillHeader = document.createElement('h3');
+                            skillHeader.innerHTML = skillName + ': <span class="text-white">' +
+                                passive.name + '</span>';
 
                             const passiveDescription = document.createElement('p');
                             passiveDescription.textContent = passive.description;
-                            skillDiv.appendChild(passiveDescription);
+
+
+                            passiveDivDecription.appendChild(skillHeader);
+                            passiveDivDecription.appendChild(passiveDescription);
+                            skillDiv.appendChild(passiveDivDecription);
+                            skillRow.appendChild(skillDiv);
+
+
                         } else {
                             const skill = spells[index -
                                 1]; // spells array starts from 0 index but we skip the passive
 
-                            // Display skill details
+                            // Create the container for the skill details
+                            const skillDiv = document.createElement('div');
+                            skillDiv.className = 'row skill py-4 align-items-center';
+
+                            // Create the left column for the image
+                            const skillImageDiv = document.createElement('div');
+                            skillImageDiv.className = 'col-2 skill';
+
                             const skillImage = document.createElement('img');
                             skillImage.src = `/assets/data-img/spell/${skill.image.full}`;
                             skillImage.alt = skill.name;
-                            skillDiv.appendChild(skillImage);
+
+                            skillImageDiv.appendChild(skillImage);
+                            skillDiv.appendChild(skillImageDiv);
+
+
+                            // Create the right column for the description and other details
+                            const skillDetailsDiv = document.createElement('div');
+                            skillDetailsDiv.className = 'col-10 skill';
+
+                            const skillHeader = document.createElement('h3');
+                            skillHeader.innerHTML = skillName + ': <span class="text-white">' +
+                                skill.name + '</span>';
 
                             const skillDescription = document.createElement('p');
                             skillDescription.textContent = skill.description;
-                            skillDiv.appendChild(skillDescription);
 
                             const skillCooldown = document.createElement('p');
                             skillCooldown.textContent = `Cooldown: ${skill.cooldownBurn}`;
-                            skillDiv.appendChild(skillCooldown);
 
                             const skillCost = document.createElement('p');
                             skillCost.textContent = `Cost: ${skill.costBurn}`;
-                            skillDiv.appendChild(skillCost);
 
                             const skillTooltip = document.createElement('p');
                             skillTooltip.innerHTML = skill.tooltip;
-                            skillDiv.appendChild(skillTooltip);
+
+                            // Append all details to the right column
+                            skillDetailsDiv.appendChild(skillHeader);
+                            skillDetailsDiv.appendChild(skillDescription);
+                            skillDetailsDiv.appendChild(skillCooldown);
+                            skillDetailsDiv.appendChild(skillCost);
+                            skillDetailsDiv.appendChild(skillTooltip);
+
+                            // Append the right column to the container
+                            skillDiv.appendChild(skillDetailsDiv);
+
+                            skillRow.appendChild(skillDiv);
                         }
 
-                        skillRow.appendChild(skillDiv);
                     });
                     skillSection.appendChild(skillRow);
                 }
