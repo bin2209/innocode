@@ -439,8 +439,8 @@ section {
 .section-hero {
     background: url(../images/hero.png) no-repeat;
      background-position: center;
-    height: calc(100vh - 80px);
-    margin-top: 80px;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
 }
 
 .section-hero .branding {
@@ -455,6 +455,31 @@ section {
     position: relative;
 }
 
+
+
+.section-tft {
+    background: url(../images/tft.png) no-repeat;
+     background-position: center;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+}
+
+.section-tft .branding {
+    text-align: center;
+    padding-top: 200px;
+}
+
+.section-tft .tft-image {
+    width: 100%;
+    object-fit: cover;
+    max-width: 250px;
+    height: 100%;
+    position: relative;
+    
+}
+.section-tft .play-btn-container{
+    margin-top: 3em !important;
+}
  .play-btn {
     width: 171px;
     top: 4px;
@@ -934,7 +959,7 @@ section {
 /* Champions  */
 .champions-hero{
     background: url(../images/champions.png) no-repeat !important;
-     background-position: center;
+     background-position: center !important;
     width: 100%;
     background-size: cover !important;
 }
