@@ -153,23 +153,23 @@
     <section class="skin-section">
         <div id="skin-overplay" class="overplay"></div>
 
-            <div class="container px-4">
-                <div class="row bottom-50 champion-name-banner-mb ">
-                    <h2 class="col-12 primary-color py-4 ">Skin</h2>
-                </div>
-                <div class="row ">
-                    <div class="swiper-container ">
-                        <div class="swiper-wrapper">
-                            <!-- Slides will be dynamically added here -->
-                        </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination mt-4"></div>
-                        <!-- Add Navigation -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev "></div>
+        <div class="container px-4">
+            <div class="row bottom-50 champion-name-banner-mb ">
+                <h2 class="col-12 primary-color py-4 ">Skin</h2>
+            </div>
+            <div class="row ">
+                <div class="swiper-container ">
+                    <div class="swiper-wrapper">
+                        <!-- Slides will be dynamically added here -->
                     </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination mt-4"></div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev "></div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- Equipment section -->
@@ -179,7 +179,7 @@
                 <h2 class="col-12 primary-color py-4 ">Equipment</h2>
             </div>
             <div class="row">
-                    <div id="equipment-list" class="row"> </div>
+                <div id="equipment-list" class="row"> </div>
             </div>
         </div>
     </section>
@@ -229,25 +229,27 @@
                     const champion = champions.find(champ => formatName(champ.name) === championName);
 
                     if (champion) {
+                        const formattedName = formatName(champion.name);
+
                         // Access the DOM elements and set their content
                         document.getElementById('champion-name-banner').textContent = champion.name;
                         document.getElementById('champion-name').textContent = champion.name;
                         document.getElementById('champion-title').textContent = champion.title;
                         document.getElementById('champion-icon').src =
-                            `/assets/data-img/champion/${champion.image.full}`;
+                            `/assets/data/en_US/champion/tiles/${formattedName}_0.jpg`;
+
                         document.getElementById('champion-description').textContent = champion.blurb;
                         document.getElementById('champion-tags').textContent = champion.tags.join(', ');
 
-                        const formattedName = formatName(champion.name);
                         // Set background image of the champion-background section
                         const championBackground = document.getElementById('champion-background');
                         championBackground.style.background =
-                            `url(/assets/data-img/champion-more/splash/${formattedName}_0.jpg`;
+                            `url(/assets/data/en_US/champion/centered/${formattedName}_0.jpg`;
                         championBackground.style.backgroundSize = 'cover';
 
                         const championOverplay = document.getElementById('champion-overplay');
                         championOverplay.style.background =
-                            `url(/assets/data-img/champion-more/splash/${formattedName}_1.jpg`;
+                            `url(/assets/data/en_US/champion/splash/${formattedName}_1.jpg`;
 
                         // Display skills and passive
                         displaySkills(champion.passive, champion.spells);
@@ -293,25 +295,14 @@
 
                         // Display equipment
                         // Display equipment if blocks exist
-                        if (champion.recommended && Array.isArray(champion.recommended)) {
-                            champion.recommended.forEach(recommendation => {
-                                if (recommendation.blocks && Array.isArray(recommendation.blocks)) {
-                                    displayEquipment(recommendation.blocks);
-                                } else {
-                                    console.error(
-                                        'Blocks data is missing or invalid in recommendation');
-                                }
-                            });
-                        } else {
-                            console.error('Recommended data is missing or invalid');
-                        }
+                        displayEquipment(championName);
+
                     } else {
                         console.error('Champion not found');
                     }
                 } catch (error) {
                     console.error('Error fetching champion data:', error);
                 }
-
 
 
 
@@ -336,7 +327,7 @@
                             passiveDiv.className = 'col-3 col-sm-2 skill ';
 
                             const passiveImage = document.createElement('img');
-                            passiveImage.src = `/assets/data-img/passive/${passive.image.full}`;
+                            passiveImage.src = `/assets/data/en_US/passive/${passive.image.full}`;
                             passiveImage.alt = passive.name;
 
                             passiveDiv.appendChild(passiveImage);
@@ -374,7 +365,7 @@
                             skillImageDiv.className = 'col-3 col-sm-2 skill';
 
                             const skillImage = document.createElement('img');
-                            skillImage.src = `/assets/data-img/spell/${skill.image.full}`;
+                            skillImage.src = `/assets/data/en_US/spell/${skill.image.full}`;
                             skillImage.alt = skill.name;
 
                             skillImageDiv.appendChild(skillImage);
@@ -436,13 +427,15 @@
 
             // Function to display skins in the Swiper
             function displaySkins(skins, championName) {
+                const formattedName = formatName(championName);
+                // console.log(formattedName);
                 const swiperWrapper = document.querySelector('.swiper-wrapper');
                 skins.forEach(skin => {
                     const slide = document.createElement('div');
                     slide.className = 'swiper-slide skin-slide';
                     const skinImage = document.createElement('img');
                     skinImage.src =
-                        `/assets/data-img/champion-more/splash/${championName}_${skin.num}.jpg`;
+                        `/assets/data/en_US/champion/splash/${formattedName}_${skin.num}.jpg`;
                     skinImage.alt = skin.name;
                     const skinName = document.createElement('h3');
                     skinName.textContent = skin.name;
@@ -452,47 +445,86 @@
                 });
             }
 
-            // Function to display equipment
-            function displayEquipment(blocks) {
-                const equipmentList = document.getElementById('equipment-list');
-                blocks.forEach(block => {
-                    if (block.type != 'consumables') {
 
-                        const colBlock = document.createElement('div');
-                        colBlock.className = 'col-3 col-sm-2';
 
-                        const blockDiv = document.createElement('div');
 
-                        blockDiv.className = 'equipment-block col-2 my-4';
-
-                        const blockTitle = document.createElement('h3');
-                        blockTitle.textContent = block.type.charAt(0).toUpperCase() + block.type.slice(
-                            1);
-                        blockTitle.className = 'mb-4';
-                        blockDiv.appendChild(blockTitle);
-
-                        block.items.forEach(item => {
-                            const itemDiv = document.createElement('div');
-                            itemDiv.className = 'item';
-
-                            const itemImage = document.createElement('img');
-                            itemImage.src = `/assets/data-img/item/${item.id}.png`;
-                            itemImage.alt = `Item ${item.id}`;
-                            itemDiv.appendChild(itemImage);
-
-                            const itemCount = document.createElement('p');
-                            itemCount.textContent = `x${item.count}`;
-                            itemDiv.appendChild(itemCount);
-
-                            blockDiv.appendChild(itemDiv);
-                            colBlock.appendChild(blockDiv);
-                        });
-
-                        equipmentList.appendChild(colBlock);
+            // Function to fetch the champion data
+            async function fetchChampionFullByName(championName) {
+                console.log(1);
+                try {
+                    const response = await fetch(`/assets/data/en_US/championFull.json`);
+                    const data = await response.json();
+                    const champion = data.data[championName];
+                    if (champion) {
+                        return champion;
+                    } else {
+                        console.error('Champion not found:', championName);
+                        return null;
                     }
-
-                });
+                } catch (error) {
+                    console.error('Error fetching champion data:', error);
+                    return null;
+                }
             }
+
+            // Function to display equipment
+            async function displayEquipment(championName) {
+                const equipmentList = document.getElementById('equipment-list');
+                equipmentList.innerHTML = ''; // Clear previous content
+
+                const champion = await fetchChampionFullByName(championName); // lấy dữ liệu full
+                console.log(championName);
+                console.log(champion);
+
+                if (!champion || !champion.recommended || champion.recommended.length === 0) {
+                    console.error('Recommended equipment not found for champion:', champion ? champion
+                        .name : 'Unknown');
+                    return;
+                }
+
+                const recommended = champion.recommended.find(rec => rec.mode === 'CLASSIC' || rec.mode ===
+                    'ARAM'); // Modify as needed
+
+                if (recommended) {
+                    recommended.blocks.forEach(block => {
+                        if (block.type !== 'consumables') {
+                            const colBlock = document.createElement('div');
+                            colBlock.className = 'col-3 col-sm-2';
+
+                            const blockDiv = document.createElement('div');
+                            blockDiv.className = 'equipment-block col-2 my-4';
+
+                            const blockTitle = document.createElement('h3');
+                            blockTitle.textContent = block.type.charAt(0).toUpperCase() + block.type
+                                .slice(1);
+                            blockTitle.className = 'mb-4';
+                            blockDiv.appendChild(blockTitle);
+
+                            block.items.forEach(item => {
+                                const itemDiv = document.createElement('div');
+                                itemDiv.className = 'item';
+
+                                const itemImage = document.createElement('img');
+                                itemImage.src = `/assets/data/en_US/item/${item.id}.png`;
+                                itemImage.alt = `Item ${item.id}`;
+                                itemDiv.appendChild(itemImage);
+
+                                const itemCount = document.createElement('p');
+                                itemCount.textContent = `x${item.count}`;
+                                itemDiv.appendChild(itemCount);
+
+                                blockDiv.appendChild(itemDiv);
+                                colBlock.appendChild(blockDiv);
+                            });
+
+                            equipmentList.appendChild(colBlock);
+                        }
+                    });
+                } else {
+                    console.error('Recommended equipment not found for champion:', champion.name);
+                }
+            }
+
 
             // Extract the champion name from the URL and call fetchChampionByName function
             const championName = getNameFromUrl();
