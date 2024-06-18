@@ -306,6 +306,19 @@ section {
     background-position: center !important;
 
 }
+.fpt-logo{
+    width: 100%;
+    max-width: 250px;
+    object-fit: contain;
+}
+.build-with-logo img{
+    width: 100%;
+    max-width: 50px !important;
+    object-fit: contain;
+}
+.build-with-logo-full img{
+    max-width: 420px;
+}
 .normal-section {
     height: calc(100vh - 80px);
     margin-top: 80px;

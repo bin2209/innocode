@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Show the default section and set its button as 'active'
         document.getElementById(defaultSection).style.display = 'block';
         document.getElementById(buttons[sections.indexOf(defaultSection)]).classList.add('active');
-        
+
         // Set up onclick events for each button
         buttons.forEach((button, index) => {
             document.getElementById(button).onclick = function () {
                 sections.forEach(section => document.getElementById(section).style.display = 'none');
                 buttons.forEach(btn => document.getElementById(btn).classList.remove('active'));
-                
+
                 document.getElementById(sections[index]).style.display = 'block';
                 document.getElementById(button).classList.add('active');
             }
@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Initializing each set of sections and buttons
-      initializeSections(['show-ASSASSINS', 'show-FIGHTERS', 'show-MAGES', 'show-MARKSMEN', 'show-SUPPORTS', 'show-TANKS'], 
-                        ['ASSASSINS', 'FIGHTERS', 'MAGES', 'MARKSMEN', 'SUPPORTS', 'TANKS'], 'ASSASSINS');
+    initializeSections(['show-ASSASSINS', 'show-FIGHTERS', 'show-MAGES', 'show-MARKSMEN', 'show-SUPPORTS', 'show-TANKS'],
+        ['ASSASSINS', 'FIGHTERS', 'MAGES', 'MARKSMEN', 'SUPPORTS', 'TANKS'], 'ASSASSINS');
+    initializeSections(['show-github', 'show-bootstrap', 'show-jquery', 'show-json', 'show-photoshop'],
+        ['github', 'bootstrap', 'jquery', 'json', 'photoshop'], 'github');
 });
