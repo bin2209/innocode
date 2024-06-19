@@ -86,7 +86,8 @@ td {
 body {
     line-height: 1;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
@@ -153,13 +154,15 @@ section {
     background-size: cover !important;
 }
 
-.heading{
+.heading {
     font-size: 40px;
 }
+
 .container {
     max-width: 1100px;
 }
-.overplay-blur{
+
+.overplay-blur {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     width: 100%;
@@ -168,12 +171,15 @@ section {
 
 
 .legends-nav {
-    position: relative; /* This can be changed to suit your layout */
+    position: relative;
+    /* This can be changed to suit your layout */
     width: 100%;
-    background-color: #fff; /* Adjust as necessary */
+    background-color: #fff;
+    /* Adjust as necessary */
     transition: all 0.3s ease-in-out;
 }
-.legends-nav .badge{
+
+.legends-nav .badge {
     position: absolute;
     background: #c3902c;
     margin: 0 0em 2em 9.5em;
@@ -276,7 +282,7 @@ section {
 .logo {
     text-align: center;
     background: url(../images/framelogo2.png) no-repeat;
-     background-position: center;
+    background-position: center;
     background-size: cover;
     width: 142px;
     padding: 30px;
@@ -299,55 +305,68 @@ section {
     width: auto;
     background-size: contain !important;
     background: url(../images/buttonframe.png) no-repeat !important;
- background-position: center;
+    background-position: center;
 }
-#champion-background{
+
+#champion-background {
     background-size: cover !important;
     background-position: center !important;
 
 }
-.fpt-logo{
+
+.fpt-logo {
     width: 100%;
     max-width: 250px;
     object-fit: contain;
 }
-.build-with-logo img{
+
+.build-with-logo img {
     width: 100%;
     max-width: 50px !important;
     object-fit: contain;
 }
-.build-with-logo-full img{
+
+.build-with-logo-full img {
     max-width: 420px;
 }
+
 .normal-section {
     height: calc(100vh - 80px);
     margin-top: 80px;
     /* background-position: center; */
 }
-.skill-section{
+
+.skill-section {
     padding: 100px 0;
     position: relative;
 }
-.skin-section{
+
+.skin-section {
     position: relative;
 }
-.skin-section .container{
+
+.skin-section .container {
     padding: 100px 0;
     position: relative;
 }
-.skill-section h3{
+
+.skill-section h3 {
     color: #FFDB7E;
 }
-.skill-section p{
+
+.skill-section p {
     padding: 5px 0;
     color: white;
 }
-.TFTEvent{
+
+.TFTEvent {
     color: #FFDB7E;
 }
-.TFTEvent img{ 
+
+.TFTEvent img {
     filter: invert(39%) sepia(84%) saturate(4258%) hue-rotate(374deg) brightness(155%) contrast(45%);
 }
+
 #skin-overplay {
     padding: 100px 0;
     background-size: cover;
@@ -356,66 +375,81 @@ section {
     width: 100%;
     height: 100%;
 }
-.skin-slide.swiper-slide-active img{
+
+.skin-slide.swiper-slide-active img {
     border: 1px solid #FFDB7E;
 }
-.skill-section img, #equipment-list img{
+
+.skill-section img,
+#equipment-list img {
     border: 1px solid #FFDB7E;
     margin: 20px 0;
 }
-.skin-section .skin-slide h3{
+
+.skin-section .skin-slide h3 {
     color: #fff;
     text-transform: capitalize;
     margin-top: 20px;
 }
-.skin-section .swiper-pagination{
+
+.skin-section .swiper-pagination {
     top: -7px !important;
 }
-.skin-section .swiper-pagination , .skin-section .swiper-button-next , .skin-section .swiper-button-prev{
+
+.skin-section .swiper-pagination,
+.skin-section .swiper-button-next,
+.skin-section .swiper-button-prev {
     position: relative;
 }
-.skin-section .swiper-pagination, .skin-section .swiper-button-next{
+
+.skin-section .swiper-pagination,
+.skin-section .swiper-button-next {
     right: 0 !important;
     left: unset !important;
     float: right;
 }
-.skin-section .swiper-pagination, .skin-section .swiper-button-prev{
+
+.skin-section .swiper-pagination,
+.skin-section .swiper-button-prev {
     left: 0 !important;
     right: unset !important;
     float: left;
 }
 
-.skin-section{
+.skin-section {
     background: url(../images/champion-description.png) no-repeat;
     background-position: center;
 }
+
 .skin-section .swiper-container {
     width: 100%;
     height: 100%;
 }
+
 .skin-section .swiper-slide {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
 }
+
 .skin-section .swiper-slide img {
     max-width: 100%;
     height: auto;
 }
 
-#champion-overplay{
+#champion-overplay {
     position: absolute !important;
     width: 100%;
     height: 100%;
     background-size: cover !important;
-    background-position: center  !important;
-    background-repeat: no-repeat  !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     opacity: 0.3;
     z-index: 1;
 }
 
-.champion-content{
+.champion-content {
     position: relative;
     z-index: 99;
 }
@@ -426,7 +460,7 @@ section {
     transition: opacity .3s ease-out;
 }
 
-.show-btn:hover{
+.show-btn:hover {
     opacity: 0.7;
 }
 
@@ -435,7 +469,7 @@ section {
 }
 
 
-.btn-section .img-fluid{
+.btn-section .img-fluid {
     /* max-width: 100px; */
 }
 
@@ -444,7 +478,7 @@ section {
 
 .section-hero {
     background: url(../images/hero.png) no-repeat;
-     background-position: center;
+    background-position: center;
     height: calc(100vh - 60px);
     margin-top: 60px;
 }
@@ -465,7 +499,7 @@ section {
 
 .section-tft {
     background: url(../images/tft.png) no-repeat;
-     background-position: center;
+    background-position: center;
     height: calc(100vh - 60px);
     margin-top: 60px;
 }
@@ -481,12 +515,14 @@ section {
     max-width: 250px;
     height: 100%;
     position: relative;
-    
+
 }
-.section-tft .play-btn-container{
+
+.section-tft .play-btn-container {
     margin-top: 3em !important;
 }
- .play-btn {
+
+.play-btn {
     width: 171px;
     top: 4px;
     height: 67px;
@@ -504,9 +540,9 @@ section {
     margin-top: 20px;
 }
 
- .outline-play-btn {
+.outline-play-btn {
     background: url(../images/Vector\ 5.png) no-repeat;
-     background-position: center;
+    background-position: center;
     width: 181px;
     position: absolute;
     z-index: 999;
@@ -516,7 +552,7 @@ section {
 /* Menu Section   */
 .section-menu {
     background: url(../images/section-2.png) no-repeat;
-     background-position: center;
+    background-position: center;
     position: relative;
 }
 
@@ -532,7 +568,7 @@ section {
 /* DTCL Slider  */
 .dtcl-slider {
     background: url(../images/dtcl.png) no-repeat;
-     background-position: center;
+    background-position: center;
     padding: 120px 0 100px;
 }
 
@@ -574,14 +610,14 @@ section {
 
 .swiper-button-next {
     background: url(../images/next.png) no-repeat;
-     background-position: center;
+    background-position: center;
     position: absolute;
     right: 0;
 }
 
 .swiper-button-prev {
     background: url(../images/prev.png) no-repeat;
-     background-position: center;
+    background-position: center;
     position: absolute;
     left: 0;
 }
@@ -661,7 +697,7 @@ section {
 
 .tft .swiper-slide-active .overplay {
     background: url(../images/tft-main-frame.png) no-repeat !important;
-     background-position: center;
+    background-position: center;
     background-size: contain !important;
     position: absolute;
     min-width: 400px;
@@ -710,13 +746,13 @@ section {
 /* gameplay Section */
 .section-gameplay {
     background: url(../images/gameplay.png) no-repeat;
-     background-position: center;
+    background-position: center;
     padding: 100px 0 100px 0;
 }
 
 .section-gameplay .overplay {
     background: url(../images/frame-gameplay.png) no-repeat;
-     background-position: center;
+    background-position: center;
     background-size: contain;
     width: 100%;
     height: 100%;
@@ -733,7 +769,7 @@ section {
 /* section Welcome */
 .section-welcome {
     background: url(../images/welcome.png) no-repeat;
-     background-position: center;
+    background-position: center;
 }
 
 .swiper-slide {
@@ -773,7 +809,8 @@ section {
 .gameplay .swiper-wrapper {
     display: flex;
 }
-.gameplay .gameplay-swiper-container-thumbs .swiper-wrapper{
+
+.gameplay .gameplay-swiper-container-thumbs .swiper-wrapper {
     justify-content: space-around;
 
 }
@@ -821,7 +858,8 @@ section {
 .gameplay .swiper-slide-thumb-active {
     transition: transform 0.3s ease;
 }
-.gameplay .swiper-slide-thumb-active img{
+
+.gameplay .swiper-slide-thumb-active img {
     border: 2px solid #FFDB7E;
     transition: transform 0.3s ease;
 
@@ -843,7 +881,7 @@ section {
 
 .section-map {
     background: url(../images/runeterra.png) no-repeat;
-     background-position: center;
+    background-position: center;
     padding: 200px 0;
     transition: opacity .3s ease-out;
     opacity: 0;
@@ -866,7 +904,7 @@ section {
 
 .shadow-divided {
     background: url(../images/shadow-divided.png) no-repeat;
-     background-position: center;
+    background-position: center;
     /* height: 124%; */
     position: absolute;
     width: 100vw !important;
@@ -889,13 +927,13 @@ section {
 
 .map-swiper-button-next {
     background: url(../images/next.png) no-repeat;
-     background-position: center;
+    background-position: center;
     right: 0;
 }
 
 .map-swiper-button-prev {
     background: url(../images/prev.png) no-repeat;
-     background-position: center;
+    background-position: center;
     left: 0;
 }
 
@@ -904,7 +942,7 @@ section {
     width: 100%;
     height: 100vh;
     background: url(../images/worldmap.png) no-repeat;
-     background-position: center;
+    background-position: center;
     background-size: cover;
 }
 
@@ -915,37 +953,42 @@ section {
     background-position: center;
     height: calc(100vh - 80px);
 }
-.game-section .game-hero-banner{
+
+.game-section .game-hero-banner {
     padding-top: 100px;
     text-align: left;
 }
 
 /* champions */
-.section-champions{
+.section-champions {
     background-image: url('../images/champion-bg.png');
     background-size: contain;
     padding: 50px 0;
 }
-.champion{
+
+.champion {
     border: 1px solid #BB882C;
 }
-.champion img{
+
+.champion img {
     width: 100%;
 
 }
-.champion h2{
+
+.champion h2 {
     background-color: #BB882C;
     font-size: 20px;
     padding: 10px 0;
 }
 
-.legends-btn{
+.legends-btn {
     background: url('../images/legends-btn.png') no-repeat;
     background-size: contain;
     text-align: center;
 }
 
-.legends-btn button{
+
+.legends-btn button {
     border: none;
     background: none;
     color: white;
@@ -962,10 +1005,11 @@ section {
     /* height: 100vh; */
     padding: 50px 0;
 }
+
 /* Champions  */
-.champions-hero{
+.champions-hero {
     background: url(../images/champions.png) no-repeat !important;
-     background-position: center !important;
+    background-position: center !important;
     width: 100%;
     background-size: cover !important;
 }
@@ -973,7 +1017,7 @@ section {
 /* Footer */
 footer {
     background: url(../images/footer.png) no-repeat;
-     background-position: center;
+    background-position: center;
     background-size: cover;
     color: white;
     padding: 50px 0;
@@ -992,48 +1036,56 @@ footer img {
 .navbar-brand {
     display: none;
 }
+
 .mobile-search {
     display: none !important;
 }
 
- /* Champion-detail-ID */
+/* Champion-detail-ID */
 
- .champion-detail img{
- max-width: unset !important; 
- }
-.champion-detail-147{
+.champion-detail img {
+    max-width: unset !important;
+}
+
+.champion-detail-147 {
     background: url(../images/bg-champion-147.png) no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.champion-detail-description  .overplay{
+.champion-detail-description .overplay {
     background-position: center !important;
     background-size: cover;
     width: 100%;
     height: 100%;
 }
-.champion-detail-description-147 .overplay{
+
+.champion-detail-description-147 .overplay {
     background: url(../images/champion-description-147.png) no-repeat;
 }
-.champion-detail .hero-image{
+
+.champion-detail .hero-image {
     width: 80% !important;
 }
-.champion-detail-description .vl{
+
+.champion-detail-description .vl {
     border-right: 1px solid #FFDB7E;
 }
-#champion-icon{
-    border: 2px solid  #FFDB7E !important;
+
+#champion-icon {
+    border: 2px solid #FFDB7E !important;
     padding: 10px;
 }
+
 #champion-name-banner {
     transform: scale(1.5);
 }
 
-.champion-detail-description img{
+.champion-detail-description img {
     width: 100%;
 }
-.champion-detail-description hr{
+
+.champion-detail-description hr {
     border: 1px solid #FFDB7E;
     height: 100%;
 }
@@ -1041,29 +1093,32 @@ footer img {
 /* Champion description */
 .champion-detail-description {
     background: url(../images/champion-description.png) no-repeat;
-     background-position: center;
+    background-position: center;
     height: 500px;
     width: 100%;
     margin: -20px 0;
     z-index: 1;
     position: relative;
 }
-.champion-name-banner-mb{
+
+.champion-name-banner-mb {
     text-align: left;
 }
 
-.search-section{
+.search-section {
     background: url(../images/search-bg.png) no-repeat !important;
-     background-position: center center !important;
+    background-position: center center !important;
     background-size: cover;
     padding: 50px 0;
     height: auto !important;
 }
+
 .section-welcome .search {
     text-align: center;
     margin: auto;
 }
-.section-welcome .search .img{
+
+.section-welcome .search .img {
     width: 100%;
     max-width: 200px;
 }
@@ -1076,49 +1131,64 @@ footer img {
     margin: 10px auto;
 }
 
-.champions-intro-section .show-btn h3{
+.champions-intro-section .show-btn h3 {
     font-size: 14px;
     justify-content: center;
     display: flex;
 }
-#augments-container img{
+
+#augments-container img {
     border: 1px solid #FFDB7E;
     width: 100%;
     object-fit: contain;
 }
-#augments-container, #traits-container h4{
+
+#augments-container,
+#traits-container h4 {
     font-size: 13px;
     margin-top: 17px;
 }
+
 /* REPONSIVE */
 @media (max-width: 991.98px) {
-    .hide-desktop-flex{
+    .hide-desktop-flex {
         display: flex !important;
     }
-    .skin-section .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+
+    .skin-section .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
         top: 0px !important;
     }
-    .legends-btn h3{
+
+    .legends-btn h3 {
         font-size: 14px;
     }
-    .legends-btn button{
+
+    .legends-btn button {
         padding: 0px 0 24px 35px;
     }
+
+    #champions-filter .legends-btn button {
+        padding: 0px 0px 15px 4.5em !important;
+    }
+
     h2 {
         font-size: 26px;
     }
-    
+
     h3 {
         font-size: 18px;
     }
-    
+
     p {
         font-size: 14px;
         line-height: 1.5;
     }
-    .legends-nav{
+
+    .legends-nav {
         height: 60px !important;
     }
+
     .navbar-brand {
         display: block;
         position: relative;
@@ -1150,68 +1220,87 @@ footer img {
         top: -8px;
         background: #FFDB7E;
     }
-    .navbar-collapse{
+
+    .navbar-collapse {
         z-index: 99;
         background: #1A2645;
         top: -8px;
         position: relative;
     }
-     .login{
+
+    .login {
         display: none !important;
     }
+
     .mobile-search {
         display: block !important;
     }
-    .legends-nav .search input{
+
+    .legends-nav .search input {
         width: 86%;
         position: relative;
         bottom: 8px;
     }
-    .search-icon{
+
+    .search-icon {
         bottom: 10px;
         z-index: 99;
     }
+
     .section-worldmap {
         height: 100vh;
         background-size: contain;
     }
-    .champion-detail-description .vl{
+
+    .champion-detail-description .vl {
         display: none;
     }
-    .champion-name-banner-mb{
+
+    .champion-name-banner-mb {
         width: 100%;
         text-align: center;
         margin: auto;
     }
-    .gameplay-swiper-container-thumbs .swiper-slide img{
+
+    .gameplay-swiper-container-thumbs .swiper-slide img {
         width: 80px;
         height: 80px;
     }
-    .dtcl-slider{
-    padding: 120px 0 200px;
+
+    .dtcl-slider {
+        padding: 120px 0 200px;
 
     }
-    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
         top: 30em !important;
     }
-    .tft .swiper-button-next, .tft .swiper-button-prev{
+
+    .tft .swiper-button-next,
+    .tft .swiper-button-prev {
         top: 32em !important;
     }
-    .swiper-button-prev{
+
+    .swiper-button-prev {
         left: 1em !important;
     }
-    .swiper-button-next{
+
+    .swiper-button-next {
         right: 1em !important;
     }
-    .tft .content{
+
+    .tft .content {
         margin-top: 17em;
     }
+
     .section-map .swiper-slide {
         width: 100%;
     }
-    .section-welcome h3{
-        color:black;
+
+    .section-welcome h3 {
+        color: black;
     }
 }
-
-
