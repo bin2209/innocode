@@ -2,264 +2,13 @@
     "type": "tft-trait",
     "version": "14.12.1",
     "data": {
-        "TFTTutorial_Assassin": {
-            "id": "TFTTutorial_Assassin",
-            "name": "Assassin",
-            "image": {
-                "full": "Trait_Icon_Assassin.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 0,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Blademaster": {
-            "id": "TFTTutorial_Blademaster",
-            "name": "Blademaster",
-            "image": {
-                "full": "Trait_Icon_Blademaster.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 48,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Brawler": {
-            "id": "TFTTutorial_Brawler",
-            "name": "Brawler",
-            "image": {
-                "full": "Trait_Icon_Brawler.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 96,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Demon": {
-            "id": "TFTTutorial_Demon",
-            "name": "Demon",
-            "image": {
-                "full": "Trait_Icon_Demon.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 144,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Glacial": {
-            "id": "TFTTutorial_Glacial",
-            "name": "Glacial",
-            "image": {
-                "full": "Trait_Icon_Glacial.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 192,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Gunslinger": {
-            "id": "TFTTutorial_Gunslinger",
-            "name": "Gunslinger",
-            "image": {
-                "full": "Trait_Icon_Gunslinger.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 240,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Hextech": {
-            "id": "TFTTutorial_Hextech",
-            "name": "Hextech",
-            "image": {
-                "full": "Trait_Icon_Hextech.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 288,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Imperial": {
-            "id": "TFTTutorial_Imperial",
-            "name": "Imperial",
-            "image": {
-                "full": "Trait_Icon_Imperial.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 336,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Ninja": {
-            "id": "TFTTutorial_Ninja",
-            "name": "Ninja",
-            "image": {
-                "full": "Trait_Icon_Ninja.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 384,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Pirate": {
-            "id": "TFTTutorial_Pirate",
-            "name": "Pirate",
-            "image": {
-                "full": "Trait_Icon_Pirate.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 432,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Ranger": {
-            "id": "TFTTutorial_Ranger",
-            "name": "Ranger",
-            "image": {
-                "full": "Trait_Icon_Ranger.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 0,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Robot": {
-            "id": "TFTTutorial_Robot",
-            "name": "Robot",
-            "image": {
-                "full": "Trait_Icon_Robot.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 48,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Shapeshifter": {
-            "id": "TFTTutorial_Shapeshifter",
-            "name": "Shapeshifter",
-            "image": {
-                "full": "Trait_Icon_Shapeshifter.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 96,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Sorcerer": {
-            "id": "TFTTutorial_Sorcerer",
-            "name": "Sorcerer",
-            "image": {
-                "full": "Trait_Icon_Sorcerer.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 144,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Void": {
-            "id": "TFTTutorial_Void",
-            "name": "Void",
-            "image": {
-                "full": "Trait_Icon_Void.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 192,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Wild": {
-            "id": "TFTTutorial_Wild",
-            "name": "Wild",
-            "image": {
-                "full": "Trait_Icon_Wild.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 240,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_Yordle": {
-            "id": "TFTTutorial_Yordle",
-            "name": "Yordle",
-            "image": {
-                "full": "Trait_Icon_Yordle.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 288,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_TutorialSecondary": {
-            "id": "TFTTutorial_TutorialSecondary",
-            "name": "Guardian",
-            "image": {
-                "full": "Trait_Icon_Knight.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 336,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTTutorial_TutorialPrimary": {
-            "id": "TFTTutorial_TutorialPrimary",
-            "name": "Exemplar",
-            "image": {
-                "full": "Trait_Icon_4_Exemplar.png",
-                "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 384,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
         "TFT11_Mythic": {
             "id": "TFT11_Mythic",
             "name": "Mythic",
             "image": {
                 "full": "Trait_Icon_11_Mythic.png",
                 "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 432,
-                "y": 48,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_InkShadow": {
@@ -268,11 +17,7 @@
             "image": {
                 "full": "Trait_Icon_11_Ink_Shadow.png",
                 "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 0,
-                "y": 96,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Storyweaver": {
@@ -281,11 +26,7 @@
             "image": {
                 "full": "Trait_Icon_11_Storyweaver.png",
                 "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 48,
-                "y": 96,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Ghostly": {
@@ -294,11 +35,7 @@
             "image": {
                 "full": "Trait_Icon_11_Ghostly.png",
                 "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 96,
-                "y": 96,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Fated": {
@@ -307,11 +44,7 @@
             "image": {
                 "full": "Trait_Icon_11_Fated.png",
                 "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 144,
-                "y": 96,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Heavenly": {
@@ -320,11 +53,7 @@
             "image": {
                 "full": "Trait_Icon_11_Heavenly.png",
                 "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 192,
-                "y": 96,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Dryad": {
@@ -333,11 +62,7 @@
             "image": {
                 "full": "Trait_Icon_11_Dryad.png",
                 "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 240,
-                "y": 96,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Fortune": {
@@ -346,11 +71,7 @@
             "image": {
                 "full": "Trait_Icon_4_Fortune.png",
                 "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 288,
-                "y": 96,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Porcelain": {
@@ -359,11 +80,7 @@
             "image": {
                 "full": "Trait_Icon_11_Porcelain.png",
                 "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 336,
-                "y": 96,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Dragonlord": {
@@ -372,11 +89,7 @@
             "image": {
                 "full": "Trait_Icon_11_Dragonlord.png",
                 "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 384,
-                "y": 96,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Umbral": {
@@ -385,11 +98,7 @@
             "image": {
                 "full": "Trait_Icon_11_Umbral.png",
                 "sprite": "tft-trait0.png",
-                "group": "tft-trait",
-                "x": 432,
-                "y": 96,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_SpiritWalker": {
@@ -398,11 +107,7 @@
             "image": {
                 "full": "Trait_Icon_11_Spirit_Walker.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 0,
-                "y": 0,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Invoker": {
@@ -411,11 +116,7 @@
             "image": {
                 "full": "Trait_Icon_9_Preserver.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 48,
-                "y": 0,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Reaper": {
@@ -424,11 +125,7 @@
             "image": {
                 "full": "Trait_Icon_11_Reaper.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 96,
-                "y": 0,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Behemoth": {
@@ -437,11 +134,7 @@
             "image": {
                 "full": "Trait_Icon_11_Behemoth.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 144,
-                "y": 0,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Bruiser": {
@@ -450,11 +143,7 @@
             "image": {
                 "full": "Trait_Icon_6_Bruiser.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 192,
-                "y": 0,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Arcanist": {
@@ -463,11 +152,7 @@
             "image": {
                 "full": "Trait_Icon_6_Arcanist.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 240,
-                "y": 0,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Duelist": {
@@ -476,11 +161,7 @@
             "image": {
                 "full": "Trait_Icon_8_Duelist.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 288,
-                "y": 0,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Warden": {
@@ -489,11 +170,7 @@
             "image": {
                 "full": "Trait_Icon_11_Warden.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 336,
-                "y": 0,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Altruist": {
@@ -502,11 +179,7 @@
             "image": {
                 "full": "Trait_Icon_11_Altruist.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 384,
-                "y": 0,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Trickshot": {
@@ -515,11 +188,7 @@
             "image": {
                 "full": "Trait_Icon_4_Sharpshooter.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 432,
-                "y": 0,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Great": {
@@ -528,11 +197,7 @@
             "image": {
                 "full": "Trait_Icon_11_Great.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 0,
-                "y": 48,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Sage": {
@@ -541,11 +206,7 @@
             "image": {
                 "full": "Trait_Icon_11_Sage.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 48,
-                "y": 48,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Exalted": {
@@ -554,11 +215,7 @@
             "image": {
                 "full": "Trait_Icon_11_Exalted.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 96,
-                "y": 48,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Artist": {
@@ -567,11 +224,7 @@
             "image": {
                 "full": "Trait_Icon_11_Artist.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 144,
-                "y": 48,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Lovers": {
@@ -580,11 +233,7 @@
             "image": {
                 "full": "Trait_Icon_11_Lovers.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 192,
-                "y": 48,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_Sniper": {
@@ -593,11 +242,7 @@
             "image": {
                 "full": "Trait_Icon_6_Sniper.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 240,
-                "y": 48,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         },
         "TFT11_TrickshotAltruist": {
@@ -606,284 +251,7 @@
             "image": {
                 "full": "Trait_Icon_11_Altruist_Trickshot.png",
                 "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 288,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Imperial": {
-            "id": "TFTEvent5YR_Imperial",
-            "name": "Imperial",
-            "image": {
-                "full": "Trait_Icon_6_Imperial.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 336,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Phantom": {
-            "id": "TFTEvent5YR_Phantom",
-            "name": "Phantom",
-            "image": {
-                "full": "Trait_Icon_Phantom.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 384,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Hellion": {
-            "id": "TFTEvent5YR_Hellion",
-            "name": "Hellion",
-            "image": {
-                "full": "Trait_Icon_5_Hellion.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 432,
-                "y": 48,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Jazz": {
-            "id": "TFTEvent5YR_Jazz",
-            "name": "Jazz",
-            "image": {
-                "full": "Trait_Icon_10_Jazz.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 0,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_MechPilot": {
-            "id": "TFTEvent5YR_MechPilot",
-            "name": "Mech-Pilot",
-            "image": {
-                "full": "Trait_Icon_3_MechPilot.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 48,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Glacial": {
-            "id": "TFTEvent5YR_Glacial",
-            "name": "Glacial",
-            "image": {
-                "full": "Trait_Icon_2_Glacial.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 96,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Boss": {
-            "id": "TFTEvent5YR_Boss",
-            "name": "The Boss",
-            "image": {
-                "full": "Trait_Icon_4_Theboss.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 144,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Mascot": {
-            "id": "TFTEvent5YR_Mascot",
-            "name": "Mascot",
-            "image": {
-                "full": "Trait_Icon_8_Mascot.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 192,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Elderwood": {
-            "id": "TFTEvent5YR_Elderwood",
-            "name": "Elderwood",
-            "image": {
-                "full": "Trait_Icon_4_Wilderness.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 240,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Rebel": {
-            "id": "TFTEvent5YR_Rebel",
-            "name": "Rebel",
-            "image": {
-                "full": "Trait_Icon_3_Rebel.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 288,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Socialite": {
-            "id": "TFTEvent5YR_Socialite",
-            "name": "Socialite",
-            "image": {
-                "full": "Trait_Icon_6_Socialite.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 336,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Disco": {
-            "id": "TFTEvent5YR_Disco",
-            "name": "Disco",
-            "image": {
-                "full": "Trait_Icon_10_Funk.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 384,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Trainer": {
-            "id": "TFTEvent5YR_Trainer",
-            "name": "Trainer",
-            "image": {
-                "full": "Trait_Icon_7_Trainers.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait",
-                "x": 432,
-                "y": 96,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Shurima": {
-            "id": "TFTEvent5YR_Shurima",
-            "name": "Shurima",
-            "image": {
-                "full": "Trait_Icon_9_Shurima.png",
-                "sprite": "tft-trait2.png",
-                "group": "tft-trait",
-                "x": 0,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Yordle": {
-            "id": "TFTEvent5YR_Yordle",
-            "name": "Yordle",
-            "image": {
-                "full": "Trait_Icon_6_Yordle.png",
-                "sprite": "tft-trait2.png",
-                "group": "tft-trait",
-                "x": 48,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_YordleLord": {
-            "id": "TFTEvent5YR_YordleLord",
-            "name": "Yordle-Lord",
-            "image": {
-                "full": "Trait_Icon_6_YordleLord.png",
-                "sprite": "tft-trait2.png",
-                "group": "tft-trait",
-                "x": 96,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Mountain": {
-            "id": "TFTEvent5YR_Mountain",
-            "name": "Mountain",
-            "image": {
-                "full": "Trait_Icon_2_Mountain.png",
-                "sprite": "tft-trait2.png",
-                "group": "tft-trait",
-                "x": 144,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Shimmerscale": {
-            "id": "TFTEvent5YR_Shimmerscale",
-            "name": "Shimmerscale",
-            "image": {
-                "full": "Trait_Icon_7_Shimmerscale.png",
-                "sprite": "tft-trait2.png",
-                "group": "tft-trait",
-                "x": 192,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Coven": {
-            "id": "TFTEvent5YR_Coven",
-            "name": "Coven",
-            "image": {
-                "full": "Trait_Icon_5_Coven.png",
-                "sprite": "tft-trait2.png",
-                "group": "tft-trait",
-                "x": 240,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_LaserCorps": {
-            "id": "TFTEvent5YR_LaserCorps",
-            "name": "LaserCorps",
-            "image": {
-                "full": "Trait_Icon_8_Lasercorps.png",
-                "sprite": "tft-trait2.png",
-                "group": "tft-trait",
-                "x": 288,
-                "y": 0,
-                "w": 48,
-                "h": 48
-            }
-        },
-        "TFTEvent5YR_Bilgewater": {
-            "id": "TFTEvent5YR_Bilgewater",
-            "name": "Bilgewater",
-            "image": {
-                "full": "Trait_Icon_9_Bilgewater.png",
-                "sprite": "tft-trait2.png",
-                "group": "tft-trait",
-                "x": 336,
-                "y": 0,
-                "w": 48,
-                "h": 48
+                "group": "tft-trait"
             }
         }
     }
