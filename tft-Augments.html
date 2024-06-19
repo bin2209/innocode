@@ -102,185 +102,70 @@
     <section class="section-champions px-3">
         <div class="container ">
             <div class="row bottom-50 champion-name-banner-mb ">
-                <h2 class="col-12 primary-color py-4 ">Traits</h2>
+                <h2 class="col-12 primary-color py-4 ">Augments</h2>
             </div>
+            <div id="augments-container" class="row"></div>
 
-            <div id="traits-container" class="row"></div>
-
-            <div class="row bottom-50 champion-name-banner-mb ">
-                <h2 class="col-12 primary-color py-4 ">Champions</h2>
-            </div>
-            <div class="container ">
-                <data id="champions-filter" class="row">
-                    <div class="col-6 col-md-3 col-lg-2 mb-3">
-                        <div class="legends-btn">
-                            <button onclick="filterChampions('All')">
-                                <h3>All</h3>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-3 col-lg-2 mb-3">
-                        <div class="legends-btn">
-                            <button onclick="filterChampions('1')">
-                                <h3>1 Star</h3>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-3 col-lg-2 mb-3">
-                        <div class="legends-btn">
-                            <button onclick="filterChampions('2')">
-                                <h3>2 Star</h3>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-3 col-lg-2 mb-3">
-                        <div class="legends-btn">
-                            <button onclick="filterChampions('3')">
-                                <h3>3 Star</h3>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-3 col-lg-2 mb-3">
-                        <div class="legends-btn">
-                            <button onclick="filterChampions('4')">
-                                <h3>4 Star</h3>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-3 col-lg-2 mb-3">
-                        <div class="legends-btn">
-                            <button onclick="filterChampions('5')">
-                                <h3>5 Star</h3>
-                            </button>
-                        </div>
-                    </div>
-
-                </data>
-
-
-                <div id="champions-container" class="row"></div>
-
-
-            </div>
-
-
-
-            <script>
-                // Function to fetch traits data
-                async function fetchTraits() {
+            <script>// Function to fetch augments data
+                async function fetchAugments() {
                     try {
-                        const response = await fetch('/assets/data/en_US/tft-trait.json');
+                        const response = await fetch('/assets/data/en_US/tft-augments.json');
                         const data = await response.json();
-                        const traitsArray = Object.values(data.data);
-                        // Filter out traits that start with 'TFTTutorial_' and 'TFTEvent5YR_'
-                        const filteredTraits = traitsArray.filter(trait => {
-                            return !trait.id.startsWith('TFTTutorial_') && !trait.id.startsWith(
-                                'TFTEvent5YR_');
-                        });
-                        return filteredTraits;
+                        return Object.values(data.data); // Convert the augments object to an array
                     } catch (error) {
-                        console.error('Error fetching trait data:', error);
+                        console.error('Error fetching augment data:', error);
                         return [];
                     }
                 }
-
-                // Function to display all traits
-                async function displayTraits() {
-                    const traits = await fetchTraits();
-
-                    const container = document.getElementById('traits-container');
+                
+                // Function to display all augments, sorted by tier
+                async function displayAugments() {
+                    const augments = await fetchAugments();
+                
+                    // Define the sort order for tiers
+                    const tierOrder = { bronze: 1, gold: 2, platinum: 3 };
+                
+                    // Sort augments by tier
+                    augments.sort((a, b) => {
+                        return (tierOrder[a.tier] || 0) - (tierOrder[b.tier] || 0);
+                    });
+                
+                    const container = document.getElementById('augments-container');
                     container.innerHTML = '';
-
-                    traits.forEach(trait => {
-                        const formattedName = formatName(trait.name);
-                        // Determine if the trait id starts with 'TFTEvent5YR_'
-                        const isEventTrait = trait.id.startsWith('TFTEvent5YR_');
-
+                
+                    augments.forEach(augment => {
+                        const formattedName = formatName(augment.name);
                         container.innerHTML += `
-            <div class="col-4 col-sm-3 col-md-2 col-lg-2 p-3">
-                <div class="trait text-center ${isEventTrait ? 'TFTEvent' : ''}">
-                    <img src="/assets/data/en_US/tft/tft-trait/${trait.image.full}" alt="${trait.name} icon">
-                    <h4>${trait.name}</h4>
-                </div>
-            </div>
-        `;
+                            <div class="col-3 col-sm-3 col-md-2 col-lg-1 p-3">
+                                <div class="augment text-center">
+                                    <img src="/assets/data/en_US/tft/tft-augment/${augment.image.full}" alt="${augment.name} icon">
+                                    <h4>${augment.name}</h4>
+                                </div>
+                            </div>
+                        `;
                     });
                 }
-
-                // Function to fetch champions data
-                async function fetchChampions() {
-                    try {
-                        const response = await fetch('/assets/data/en_US/tft-champion.json');
-                        const data = await response.json();
-                        const championsArray = Object.values(data.data);
-                        // Filter out champions that start with 'TFTTutorial_'
-                        const filteredChampions = championsArray.filter(champion => {
-                            return !champion.id.startsWith('TFTTutorial_');
-                        });
-                        return filteredChampions;
-                    } catch (error) {
-                        console.error('Error fetching champion data:', error);
-                        return [];
-                    }
-                }
-
-                // Function to display champions based on selected tier (coins)
-                async function displayChampions(tierFilter) {
-                    const champions = await fetchChampions();
-
-                    const container = document.getElementById('champions-container');
-                    container.innerHTML = '';
-
-                    champions.forEach(champion => {
-                        const formattedName = formatName(champion.name);
-                        // Determine if the champion id starts with 'TFTEvent5YR_'
-                        const isEventChampion = champion.id.startsWith('TFTEvent5YR_');
-
-                        // Check if the champion's tier matches the selected tierFilter
-                        if (tierFilter === 'All' || champion.tier.toString() === tierFilter) {
-                            container.innerHTML += `
-                <div class="col-4 col-sm-3 col-md-2 col-lg-2 p-3">
-                    <div class="champion text-center ${isEventChampion ? 'TFTEvent' : ''}">
-                        <img src="/assets/data/en_US/tft/tft-champion/${champion.image.full}" alt="${champion.name} icon">
-                        <h4>${champion.name}</h4>
-                    </div>
-                </div>
-            `;
-                        }
-                    });
-                }
-
-                // Function to filter champions by tier (coins)
-                async function filterChampions(tier) {
-                    await displayChampions(tier);
-                }
-
+                
                 // Initial setup
                 async function initialize() {
-                    await displayTraits();
-                    await displayChampions('All'); // Display all champions initially
+                    await displayAugments();
                 }
-
+                
                 initialize();
-
+                
                 // Function to format the name (stub for potential future use)
                 function formatName(name) {
                     // Implement any necessary name formatting logic here
                     return name.replace(/\s+/g, '-').toLowerCase();
                 }
-            </script>
+                 </script>
         </div>
     </section>
 
 
 
 
-    <!-- <section class="btn-section champions-intro-section">
+    <section class="btn-section champions-intro-section">
         <div class="container p-4">
             <div class="row py-5">
                 <div class="col-12 col-sm-6 col text-center">
@@ -288,7 +173,7 @@
                     <h2 class="primary-color my-3 heading">PICK UP AND GO</h2>
                     <p class="my-4 text-white">Cross-platform support means you can play with your friends (and crush
                         your enemies) across PC, Mac and mobile.</p>
-                    <div class="row justify-content-center py-3">
+                    <!-- <div class="row justify-content-center py-3">
             <div class="play-btn-container justify-content-center">
               <a href="champion.html">
                 <div class="outline-play-btn">
@@ -298,7 +183,7 @@
                 </button>
             </div>
             </a>
-          </div>
+          </div> -->
                 </div>
 
                 <div id="FIGHTERS" class="col-12 col-sm-6 text-center">
@@ -309,7 +194,7 @@
 
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- footer  -->
     <footer>
