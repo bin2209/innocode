@@ -13,7 +13,7 @@
                 "sprite": "tft-champion1.png",
                 "group": "tft-champion"
             },
-                             "trait-id": ["Inkshadow", "Ghostly", "Bruiser"]
+                             "trait-id": ["InkShadow", "Ghostly", "Bruiser"]
         },
         "TFT11_Ahri": {
             "id": "TFT11_Ahri",
@@ -200,7 +200,7 @@
                 "sprite": "tft-champion1.png",
                 "group": "tft-champion"
             },
-                             "trait-id": ["Inkshadow","Trickshot"]
+                             "trait-id": ["InkShadow","Trickshot"]
         },
         "TFT11_Kayn": {
             "id": "TFT11_Kayn",
@@ -354,7 +354,7 @@
                 "sprite": "tft-champion2.png",
                 "group": "tft-champion"
             },
-                             "trait-id": ["Inkshadow","Sniper"]
+                             "trait-id": ["InkShadow","Sniper"]
         },
         "TFT11_Sett": {
             "id": "TFT11_Sett",
@@ -486,7 +486,7 @@
                 "sprite": "tft-champion2.png",
                 "group": "tft-champion"
             },
-                             "trait-id": ["Inkshadow","Spirit Walker" ,"Behemoth"]
+                             "trait-id": ["InkShadow","SpiritWalker" ,"Behemoth"]
         },
         "TFT11_Volibear": {
             "id": "TFT11_Volibear",
@@ -497,7 +497,7 @@
                 "sprite": "tft-champion2.png",
                 "group": "tft-champion"
             },
-                             "trait-id": ["Inkshadow","Duelist"]
+                             "trait-id": ["InkShadow","Duelist"]
         },
         "TFT11_WuKong": {
             "id": "TFT11_WuKong",
@@ -629,7 +629,7 @@
                 "sprite": "tft-champion3.png",
                 "group": "tft-champion"
             },
-                             "trait-id": ["Inkshadow","Warden"]
+                             "trait-id": ["InkShadow","Warden"]
         },
         "TFT11_Diana": {
             "id": "TFT11_Diana",

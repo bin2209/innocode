@@ -276,19 +276,20 @@
 
             // Log the traitId to ensure it's correct
 
-            // console.log(traitId);
+            console.log(traitId);
 
             const championsWithTrait = champions.filter(champion => {
-            console.log('Trait ID:', champion.image.traitId);
+            // console.log('Trait ID:', champion.image.traitId);
 
 
-                console.log('Champion:', champion.name, 'Traits:', champion['trait-id']); // Debug log
+                // console.log('Champion:', champion.name, 'Traits:', champion['trait-id']); 
+                // Debug log
                 return champion['trait-id'] && champion['trait-id'].includes(traitId);
             });
 
             const championsHTML = championsWithTrait.map(champion => `
 
-            <div class="p-2 col-6 col-sm-4 col-md-3 ">
+            <div class="p-2 col-6 col-sm-3 col-md-4 ">
             <div class="champion text-center   ">
                                 <img class="champion-cover" src="/assets/data/en_US/tft/tft-champion/${champion.image.full}" alt="Kindred icon">
                                 <div class="row">

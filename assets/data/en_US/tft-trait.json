@@ -244,15 +244,8 @@
                 "sprite": "tft-trait1.png",
                 "group": "tft-trait"
             }
-        },
-        "TFT11_TrickshotAltruist": {
-            "id": "TFT11_TrickshotAltruist",
-            "name": "Trickshot/Altruist",
-            "image": {
-                "full": "Trait_Icon_11_Altruist_Trickshot.png",
-                "sprite": "tft-trait1.png",
-                "group": "tft-trait"
-            }
         }
+        
+      
     }
 }
