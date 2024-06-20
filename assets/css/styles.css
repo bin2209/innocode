@@ -1029,6 +1029,15 @@ section {
     /* border: 1px solid #FFDB7E; */
 
 }
+#championsModal .modal-header{
+    justify-content: space-between;
+}
+#championsModal button{
+    font-size: 30px;
+    background: none;
+    color: white;
+    border: none;
+}
 /* Famost Area Section  */
 .famost-area-section {
     width: 100%;
