@@ -990,6 +990,12 @@ section {
     text-align: center;
 }
 
+.coin-icon{
+    width: 13px !important;
+    object-fit: contain;
+}
+
+
 
 .legends-btn button {
     border: none;
@@ -1002,6 +1008,27 @@ section {
     text-transform: uppercase;
 }
 
+#traits-container img{
+    cursor: pointer;
+}
+/* Modal  */
+#championsModal .modal-content {
+    background: url(../images/modal-bg.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* border: 1px solid #FFDB7E; */
+    border-radius: 0;
+}
+#championsModal .modal-dialog {
+    /* max-width: 800px; */
+    margin: 1.75rem auto;
+}
+
+#championsModal img{
+    width: 100%;
+    /* border: 1px solid #FFDB7E; */
+
+}
 /* Famost Area Section  */
 .famost-area-section {
     width: 100%;

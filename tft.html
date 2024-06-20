@@ -23,6 +23,7 @@
 </head>
 
 <body>
+   
     <!-- NAVBAR -->
     <nav id="legends-nav" class="legends-nav navbar navbar-expand-lg bg-body-tertiary bg-legends">
         <div class="container">
@@ -98,6 +99,30 @@
 
     <!-- CHAMPION -->
 
+    <!-- MODAL  -->
+    <div class="modal fade " id="championsModal" tabindex="-1" role="dialog" aria-labelledby="championsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content  overplay-blur">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="championsModalLabel">Champions</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div> -->
+                <div class="modal-body ">
+                    <div class="container-fluid">
+                        <div id="modal-body" class="row">
+                        </div>
+                    </div>
+
+                       
+                    <!-- Champions will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL  -->
+
     <!-- Menu Section  -->
     <section class="section-champions px-3">
         <div class="container ">
@@ -170,113 +195,164 @@
 
 
 
-            <script>
+            <script> // Function to fetch traits data
+               
                 // Function to fetch traits data
-                async function fetchTraits() {
-                    try {
-                        const response = await fetch('/assets/data/en_US/tft-trait.json');
-                        const data = await response.json();
-                        const traitsArray = Object.values(data.data);
-                        // Filter out traits that start with 'TFTTutorial_' and 'TFTEvent5YR_'
-                        const filteredTraits = traitsArray.filter(trait => {
-                            return !trait.id.startsWith('TFTTutorial_') && !trait.id.startsWith(
-                                'TFTEvent5YR_');
-                        });
-                        return filteredTraits;
-                    } catch (error) {
-                        console.error('Error fetching trait data:', error);
-                        return [];
-                    }
-                }
+        async function fetchTraits() {
+            try {
+                const response = await fetch('/assets/data/en_US/tft-trait.json');
+                const data = await response.json();
+                const traitsArray = Object.values(data.data);
+                // Filter out traits that start with 'TFTTutorial_' and 'TFTEvent5YR_'
+                const filteredTraits = traitsArray.filter(trait => {
+                    return !trait.id.startsWith('TFTTutorial_') && !trait.id.startsWith('TFTEvent5YR_');
+                });
+                return filteredTraits;
+            } catch (error) {
+                console.error('Error fetching trait data:', error);
+                return [];
+            }
+        }
 
-                // Function to display all traits
-                async function displayTraits() {
-                    const traits = await fetchTraits();
+        // Function to fetch champions data
+        async function fetchChampions() {
+            try {
+                const response = await fetch('/assets/data/en_US/tft-champion.json');
+                const data = await response.json();
+                const championsArray = Object.values(data.data);
+                // Filter out champions that start with 'TFTTutorial_'
+                const filteredChampions = championsArray.filter(champion => {
+                    return !champion.id.startsWith('TFTTutorial_');
+                });
+                return filteredChampions;
+            } catch (error) {
+                console.error('Error fetching champion data:', error);
+                return [];
+            }
+        }
 
-                    const container = document.getElementById('traits-container');
-                    container.innerHTML = '';
+        // Function to display all traits
+        async function displayTraits() {
+            const traits = await fetchTraits();
+            const champions = await fetchChampions();
+            const container = document.getElementById('traits-container');
+            container.innerHTML = '';
 
-                    traits.forEach(trait => {
-                        const formattedName = formatName(trait.name);
-                        // Determine if the trait id starts with 'TFTEvent5YR_'
-                        const isEventTrait = trait.id.startsWith('TFTEvent5YR_');
+            traits.forEach(trait => {
+                const formattedName = formatName(trait.name);
+                // Determine if the trait id starts with 'TFTEvent5YR_'
+                const isEventTrait = trait.id.startsWith('TFTEvent5YR_');
 
-                        container.innerHTML += `
-            <div class="col-4 col-sm-3 col-md-2 col-lg-2 p-3">
-                <div class="trait text-center ${isEventTrait ? 'TFTEvent' : ''}">
-                    <img src="/assets/data/en_US/tft/tft-trait/${trait.image.full}" alt="${trait.name} icon">
-                    <h4>${trait.name}</h4>
-                </div>
-            </div>
-        `;
-                    });
-                }
-
-                // Function to fetch champions data
-                async function fetchChampions() {
-                    try {
-                        const response = await fetch('/assets/data/en_US/tft-champion.json');
-                        const data = await response.json();
-                        const championsArray = Object.values(data.data);
-                        // Filter out champions that start with 'TFTTutorial_'
-                        const filteredChampions = championsArray.filter(champion => {
-                            return !champion.id.startsWith('TFTTutorial_');
-                        });
-                        return filteredChampions;
-                    } catch (error) {
-                        console.error('Error fetching champion data:', error);
-                        return [];
-                    }
-                }
-
-                // Function to display champions based on selected tier (coins)
-                async function displayChampions(tierFilter) {
-                    const champions = await fetchChampions();
-
-                    const container = document.getElementById('champions-container');
-                    container.innerHTML = '';
-
-                    champions.forEach(champion => {
-                        const formattedName = formatName(champion.name);
-                        // Determine if the champion id starts with 'TFTEvent5YR_'
-                        const isEventChampion = champion.id.startsWith('TFTEvent5YR_');
-
-                        // Check if the champion's tier matches the selected tierFilter
-                        if (tierFilter === 'All' || champion.tier.toString() === tierFilter) {
-                            container.innerHTML += `
-                <div class="col-4 col-sm-3 col-md-2 col-lg-2 p-3">
-                    <div class="champion text-center ${isEventChampion ? 'TFTEvent' : ''}">
-                        <img class="champion-cover" src="/assets/data/en_US/tft/tft-champion/${champion.image.full}" alt="${champion.name} icon">
-                        <div class="row">
-                        <h4 class="col">${champion.name}  </h4> 
-                        <span class="col">${champion.tier.toString()}   <img src="/assets/data/en_US/tft/tft-region-portal/Coins_Icon.png" width="13"/> </span>
+                container.innerHTML += `
+                    <div class="col-4 col-sm-3 col-md-2 col-lg-2 p-3">
+                        <div class="trait text-center ${isEventTrait ? 'TFTEvent' : ''}" data-trait-id="${trait.id}">
+                            <img src="/assets/data/en_US/tft/tft-trait/${trait.image.full}" alt="${trait.name} icon">
+                            <h4>${trait.name}</h4>
                         </div>
                     </div>
-                </div>
-            `;
-                        }
-                    });
-                }
+                `;
+            });
 
-                // Function to filter champions by tier (coins)
-                async function filterChampions(tier) {
-                    await displayChampions(tier);
-                }
+            // Add click event listener to each trait
+            document.querySelectorAll('.trait').forEach(element => {
+                element.addEventListener('click', function() {
+                    const traitId = this.getAttribute('data-trait-id');
+                    showChampionsInTrait(traitId, champions);
+                });
+            });
+        }
 
-                // Initial setup
-                async function initialize() {
-                    await displayTraits();
-                    await displayChampions('All'); // Display all champions initially
-                }
+        // Function to display champions in the modal based on the clicked trait
+        function showChampionsInTrait(traitId, champions) {
+            traitId = traitId.replace('TFT11_', ''); // Remove 'TFT_' from the traitId
 
-                initialize();
+            const modalBody = document.getElementById('modal-body');
 
-                // Function to format the name (stub for potential future use)
-                function formatName(name) {
-                    // Implement any necessary name formatting logic here
-                    return name.replace(/\s+/g, '-').toLowerCase();
+            if (!modalBody) {
+                console.error('Modal body not found');
+                return;
+            }
+            modalBody.innerHTML = '';
+
+            // Log the traitId to ensure it's correct
+
+            // console.log(traitId);
+
+            const championsWithTrait = champions.filter(champion => {
+            console.log('Trait ID:', champion.image.traitId);
+
+
+                console.log('Champion:', champion.name, 'Traits:', champion['trait-id']); // Debug log
+                return champion['trait-id'] && champion['trait-id'].includes(traitId);
+            });
+
+            const championsHTML = championsWithTrait.map(champion => `
+
+            <div class="p-2 col-6 col-sm-4 col-md-3 ">
+            <div class="champion text-center   ">
+                                <img class="champion-cover" src="/assets/data/en_US/tft/tft-champion/${champion.image.full}" alt="Kindred icon">
+                                <div class="row">
+                                    <h4 class="col">${champion.name}</h4>
+                                    <span class="col">2 <img class="coin-icon" src="/assets/data/en_US/tft/tft-region-portal/Coins_Icon.png"></span>
+                                </div>
+                            </div>
+                            </div>
+
+
+            `).join('');
+
+            modalBody.innerHTML = championsHTML;
+            $('#championsModal').modal('show');
+        }
+
+        // Function to display champions based on selected tier (coins)
+        async function displayChampions(tierFilter) {
+            const champions = await fetchChampions();
+
+            const container = document.getElementById('champions-container');
+            container.innerHTML = '';
+
+            champions.forEach(champion => {
+                const formattedName = formatName(champion.name);
+                // Determine if the champion id starts with 'TFTEvent5YR_'
+                const isEventChampion = champion.id.startsWith('TFTEvent5YR_');
+
+                // Check if the champion's tier matches the selected tierFilter
+                if (tierFilter === 'All' || champion.tier.toString() === tierFilter) {
+                    container.innerHTML += `
+                        <div class="col-4 col-sm-3 col-md-2 col-lg-2 p-3">
+                            <div class="champion text-center ${isEventChampion ? 'TFTEvent' : ''}">
+                                <img class="champion-cover" src="/assets/data/en_US/tft/tft-champion/${champion.image.full}" alt="${champion.name} icon">
+                                <div class="row">
+                                    <h4 class="col">${champion.name}</h4>
+                                    <span class="col">${champion.tier.toString()} <img class="coin-icon" src="/assets/data/en_US/tft/tft-region-portal/Coins_Icon.png"/></span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
                 }
-            </script>
+            });
+        }
+
+        // Function to filter champions by tier (coins)
+        async function filterChampions(tier) {
+            await displayChampions(tier);
+        }
+
+        // Initial setup
+        async function initialize() {
+            await displayTraits();
+            await displayChampions('All'); // Display all champions initially
+        }
+
+        initialize();
+
+        // Function to format the name (stub for potential future use)
+        function formatName(name) {
+            // Implement any necessary name formatting logic here
+            return name.replace(/\s+/g, '-').toLowerCase();
+        }
+        </script>
         </div>
     </section>
 
@@ -315,6 +391,7 @@
     </section> -->
 
     <!-- footer  -->
+
     <footer>
         <div class="container">
             <div class="row">
