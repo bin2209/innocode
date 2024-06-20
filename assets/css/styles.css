@@ -120,7 +120,9 @@ body {
     color: white;
     font-family: 'Noticia Text', serif;
 }
-
+.champion img{
+    width:100%;
+   }
 #champions-container .champion img{
  width:100%;
 }
@@ -366,8 +368,9 @@ section {
     color: #FFDB7E;
 }
 
-.TFTEvent img {
-    filter: invert(39%) sepia(84%) saturate(4258%) hue-rotate(374deg) brightness(155%) contrast(45%);
+#traits-container .traits-item:hover{
+    filter: invert(39%) sepia(94%) saturate(4273%) hue-rotate(350deg) brightness(194%) contrast(87%);
+    cursor: pointer;
 }
 
 #skin-overplay {
@@ -971,6 +974,10 @@ section {
 
 .champion {
     border: 1px solid #BB882C;
+}
+.champion:hover {
+    border: 1px solid #FFDB7E;
+    cursor: pointer;
 }
 
 .champion .champion-cover {
