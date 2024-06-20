@@ -11,7 +11,8 @@
             "image": {
                 "full": "TFT11_Aatrox.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Ahri": {
@@ -21,7 +22,8 @@
             "image": {
                 "full": "TFT11_Ahri.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Amumu": {
@@ -31,7 +33,8 @@
             "image": {
                 "full": "TFT11_Amumu.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Annie": {
@@ -41,7 +44,8 @@
             "image": {
                 "full": "TFT11_Annie.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Aphelios": {
@@ -51,7 +55,8 @@
             "image": {
                 "full": "TFT11_Aphelios.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Ashe": {
@@ -61,7 +66,8 @@
             "image": {
                 "full": "TFT11_Ashe.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Alune": {
@@ -71,7 +77,8 @@
             "image": {
                 "full": "TFT11_Alune.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Bard": {
@@ -81,7 +88,8 @@
             "image": {
                 "full": "TFT11_Bard.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Caitlyn": {
@@ -91,7 +99,8 @@
             "image": {
                 "full": "TFT11_Caitlyn.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_ChoGath": {
@@ -101,7 +110,8 @@
             "image": {
                 "full": "TFT11_ChoGath.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Darius": {
@@ -111,7 +121,8 @@
             "image": {
                 "full": "TFT11_Darius.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Galio": {
@@ -121,7 +132,8 @@
             "image": {
                 "full": "TFT11_Galio.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Garen": {
@@ -131,7 +143,8 @@
             "image": {
                 "full": "TFT11_Garen.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Hwei": {
@@ -141,7 +154,8 @@
             "image": {
                 "full": "TFT11_Hwei.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Illaoi": {
@@ -151,7 +165,8 @@
             "image": {
                 "full": "TFT11_Illaoi.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Irelia": {
@@ -161,7 +176,8 @@
             "image": {
                 "full": "TFT11_Irelia.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Janna": {
@@ -171,7 +187,8 @@
             "image": {
                 "full": "TFT11_Janna.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Kaisa": {
@@ -181,7 +198,8 @@
             "image": {
                 "full": "TFT11_Kaisa.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Kayn": {
@@ -191,7 +209,8 @@
             "image": {
                 "full": "TFT11_Kayn.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_KhaZix": {
@@ -201,7 +220,8 @@
             "image": {
                 "full": "TFT11_KhaZix.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Kindred": {
@@ -211,7 +231,8 @@
             "image": {
                 "full": "TFT11_Kindred.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_KogMaw": {
@@ -221,7 +242,8 @@
             "image": {
                 "full": "TFT11_KogMaw.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_LeeSin": {
@@ -231,7 +253,8 @@
             "image": {
                 "full": "TFT11_LeeSin.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Lillia": {
@@ -241,7 +264,8 @@
             "image": {
                 "full": "TFT11_Lillia.png",
                 "sprite": "tft-champion1.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Lissandra": {
@@ -251,7 +275,8 @@
             "image": {
                 "full": "TFT11_Lissandra.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Lux": {
@@ -261,7 +286,8 @@
             "image": {
                 "full": "TFT11_Lux.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Malphite": {
@@ -271,7 +297,8 @@
             "image": {
                 "full": "TFT11_Malphite.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Morgana": {
@@ -281,7 +308,8 @@
             "image": {
                 "full": "TFT11_Morgana.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Neeko": {
@@ -291,7 +319,8 @@
             "image": {
                 "full": "TFT11_Neeko.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Ornn": {
@@ -301,7 +330,8 @@
             "image": {
                 "full": "TFT11_Ornn.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Qiyana": {
@@ -311,7 +341,8 @@
             "image": {
                 "full": "TFT11_Qiyana.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Senna": {
@@ -321,7 +352,8 @@
             "image": {
                 "full": "TFT11_Senna.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Sett": {
@@ -331,7 +363,8 @@
             "image": {
                 "full": "TFT11_Sett.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Shen": {
@@ -341,7 +374,8 @@
             "image": {
                 "full": "TFT11_Shen.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Riven": {
@@ -351,7 +385,8 @@
             "image": {
                 "full": "TFT11_Riven.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Sivir": {
@@ -361,7 +396,8 @@
             "image": {
                 "full": "TFT11_Sivir.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Soraka": {
@@ -371,7 +407,8 @@
             "image": {
                 "full": "TFT11_Soraka.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Sylas": {
@@ -381,7 +418,8 @@
             "image": {
                 "full": "TFT11_Sylas.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Syndra": {
@@ -391,7 +429,8 @@
             "image": {
                 "full": "TFT11_Syndra.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_TahmKench": {
@@ -401,7 +440,8 @@
             "image": {
                 "full": "TFT11_TahmKench.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Teemo": {
@@ -411,7 +451,8 @@
             "image": {
                 "full": "TFT11_Teemo.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Thresh": {
@@ -421,7 +462,8 @@
             "image": {
                 "full": "TFT11_Thresh.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Tristana": {
@@ -431,7 +473,8 @@
             "image": {
                 "full": "TFT11_Tristana.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Udyr": {
@@ -441,7 +484,8 @@
             "image": {
                 "full": "TFT11_Udyr.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Volibear": {
@@ -451,7 +495,8 @@
             "image": {
                 "full": "TFT11_Volibear.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_WuKong": {
@@ -461,7 +506,8 @@
             "image": {
                 "full": "TFT11_WuKong.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Yasuo": {
@@ -471,7 +517,8 @@
             "image": {
                 "full": "TFT11_Yasuo.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Yone": {
@@ -481,7 +528,8 @@
             "image": {
                 "full": "TFT11_Yone.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Yorick": {
@@ -491,7 +539,8 @@
             "image": {
                 "full": "TFT11_Yorick.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Zoe": {
@@ -501,7 +550,8 @@
             "image": {
                 "full": "TFT11_Zoe.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Zyra": {
@@ -511,7 +561,8 @@
             "image": {
                 "full": "TFT11_Zyra.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_FortuneYord": {
@@ -521,7 +572,8 @@
             "image": {
                 "full": "TFT11_Kobuko.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_RekSai": {
@@ -531,7 +583,8 @@
             "image": {
                 "full": "TFT11_RekSai.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Xayah": {
@@ -541,7 +594,8 @@
             "image": {
                 "full": "TFT11_XayahRakan.png",
                 "sprite": "tft-champion2.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Gnar": {
@@ -551,7 +605,8 @@
             "image": {
                 "full": "TFT11_Gnar.png",
                 "sprite": "tft-champion3.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Rakan": {
@@ -561,7 +616,8 @@
             "image": {
                 "full": "TFT11_Rakan.png",
                 "sprite": "tft-champion3.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Jax": {
@@ -571,7 +627,8 @@
             "image": {
                 "full": "TFT11_Jax.png",
                 "sprite": "tft-champion3.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Diana": {
@@ -581,7 +638,8 @@
             "image": {
                 "full": "TFT11_Diana.png",
                 "sprite": "tft-champion3.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Azir": {
@@ -591,7 +649,8 @@
             "image": {
                 "full": "TFT11_Azir.png",
                 "sprite": "tft-champion3.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_Nautilus": {
@@ -601,7 +660,8 @@
             "image": {
                 "full": "TFT11_Nautilus.png",
                 "sprite": "tft-champion3.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         },
         "TFT11_XayahRakanDummy": {
@@ -611,7 +671,8 @@
             "image": {
                 "full": "TFT11_XayahRakan.png",
                 "sprite": "tft-champion3.png",
-                "group": "tft-champion"
+                "group": "tft-champion",
+                 "trait-id": []
             }
         }
     }

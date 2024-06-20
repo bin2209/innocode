@@ -970,7 +970,7 @@ section {
     border: 1px solid #BB882C;
 }
 
-.champion img {
+.champion .champion-cover {
     width: 100%;
 
 }
