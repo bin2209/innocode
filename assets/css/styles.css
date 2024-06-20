@@ -121,6 +121,9 @@ body {
     font-family: 'Noticia Text', serif;
 }
 
+#champions-container .champion img{
+ width:100%;
+}
 .primary-color {
     color: #FFDB7E;
 }
