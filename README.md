@@ -1,4 +1,4 @@
-# Innocode 2024 - League of Legends Website Rebuild
+# Innocode 2024 - League of Legends & TFT Wiki
 
 Welcome to the Innocode 2024 project, a rebuild of the League of Legends website aimed at enhancing user experience with a modern design and improved functionality.
 
