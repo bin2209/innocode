@@ -1288,6 +1288,11 @@ footer img {
         bottom: 8px;
     }
 
+    .legends-nav .search input:focus {
+        width: 86% !important;
+    }
+
+
     .search-icon {
         bottom: 10px;
         z-index: 99;
