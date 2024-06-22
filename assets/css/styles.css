@@ -1011,7 +1011,7 @@ section {
     height: 58px;
     text-align: left;
     width: 100%;
-    padding: 3px 0 15px 50px;
+    padding: 3px 0 25px 50px;
     text-transform: uppercase;
 }
 
@@ -1209,14 +1209,21 @@ footer img {
     .legends-btn h3 {
         font-size: 14px;
     }
+    
 
+  
     .legends-btn button {
         padding: 0px 0 24px 35px;
     }
 
-    #champions-filter .legends-btn button {
-        padding: 0px 0px 15px 4.5em !important;
+    .section-champions .legends-btn button {
+        padding: 0px 0px 25px 3.5em !important
     }
+
+    .filter-tft .legends-btn button {
+        padding: 0px 0px 25px 3.5em !important
+    }
+
 
     h2 {
         font-size: 26px;
